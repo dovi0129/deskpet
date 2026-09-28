@@ -22,7 +22,7 @@ sys.meta_path.insert(0,DenyModels())
 
 from deskpet import DeskPet
 config_path=BASE/'config.json'
-original=config_path.read_bytes()
+original=config_path.read_bytes() if config_path.exists() else None
 app=None
 failures=[]
 checks=[]
@@ -51,7 +51,7 @@ try:
         app.toggle_details()
         app.root.update()
         labels=[r.label for r in app._rows]
-        assert '작업' in labels and '서버' not in labels, labels   # servers moved to ServerCat
+        assert '작업' in labels and '서버' not in labels, labels
         assert app.root.winfo_height()==app.card.height, 'window does not match card height'
         assert app.card.card_bbox[3] <= app.card.height, 'card clipped'
         rb=app.stage.bbox('row')
@@ -78,7 +78,7 @@ try:
         assert 'stress_row' not in view.timeline.get('1.0','end')
         view.category.set('ALL');view._tick()
         summary=view.summary.get('1.0','end')
-        assert 'Classic 대사 엔진' in summary and 'EXAONE' not in summary
+        assert '[대사 엔진]' in summary
         assert not BLOCKED.intersection(sys.modules)
         # Optional screenshot for human visual inspection, not measured sensor evidence.
         capture=os.environ.get('DESKPET_QA_SCREENSHOT')
@@ -102,4 +102,4 @@ try:
     print(f'Scope: {platform.system()} Tk and local baseline sensors for ~4 s; not long-running use or NPU compilation.')
 finally:
     if app is not None and not app._closed:app.close()
-    config_path.write_bytes(original)
+    config_path.write_bytes(original) if original is not None else config_path.unlink(missing_ok=True)

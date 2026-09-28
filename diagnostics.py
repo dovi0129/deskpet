@@ -1,4 +1,4 @@
-"""Bounded, single-writer diagnostics. No OpenVINO or GUI dependency.
+"""Bounded, single-writer diagnostics. No GUI dependency.
 
 All subprocess output is bridged to the owning process. Processes never share a
 rotating FileHandler. Privacy filtering is best effort, not a secrets guarantee.
@@ -23,7 +23,7 @@ import traceback
 import uuid
 import zipfile
 
-VERSION = "2.4.0-rc9-classic3"
+VERSION = "1.0.0"
 LEVELS = {"DEBUG": 10, "INFO": 20, "WARNING": 30, "ERROR": 40, "CRITICAL": 50}
 LOG_KEEP_DAYS = 7
 LOG_MIN_SESSIONS = 20
@@ -361,7 +361,7 @@ class Diagnostics:
                             recent.write((json.dumps(row, ensure_ascii=False) + "\n").encode("utf-8"))
                     out.writestr("READ_ME.txt", "DeskPet diagnostic report. No automatic upload.\n"
                                   "Logs are redacted best-effort. Review before sharing.\n"
-                                  "No configuration, terminal commands, process command lines or model weights.\n"
+                                  "No configuration, terminal commands or process command lines.\n"
                                   "RSS totals can double-count shared pages; private bytes are not RSS.\n")
             os.replace(temporary, destination)
             return destination
@@ -393,7 +393,7 @@ def readable_summary(summary: dict) -> str:
     battery = summary.get("battery", {})
     def show(value, unit=""):
         return "알 수 없음" if value is None or value == "" else f"{value}{unit}"
-    server_lines = []   # servers moved to ServerCat; the section only appears for old reports
+    server_lines = []   # only reports that carry server data have this section
     if servers:
         server_lines.append("[서버]")
         for name in sorted(servers):
@@ -415,7 +415,7 @@ def readable_summary(summary: dict) -> str:
                               f"PID {item.get('pid', '-')} / RSS {rss:.1f} MiB / private {private_text}")
     resource_lines += ["RSS 합계는 공유 페이지가 중복될 수 있어. private는 상주 RAM이 아닌 전용 커밋량이야.", ""]
     return "\n".join([
-        f"DeskPet Classic {summary.get('version', VERSION)} · 통합 진단",
+        f"DeskPet {summary.get('version', VERSION)} · 통합 진단",
         f"실행 세션: {summary.get('session_id', '-')}",
         f"이번 실행 시간: {show(summary.get('session_elapsed_s'), '초')}", "",
         "[온도]",
@@ -431,8 +431,8 @@ def readable_summary(summary: dict) -> str:
         f"기기: {device.get('name') or '-'}  /  출처: {device.get('source') or '-'}",
         f"배터리: {show(battery.get('percent'), '%')}  /  전력 흐름: {show(battery.get('flow_w'), ' W')}",
         f"이번 세션: 충전 +{battery.get('charged_session_wh', 0.0):.3f} Wh / 방전 -{battery.get('discharged_session_wh', 0.0):.3f} Wh", "",
-        "[Classic 대사 엔진]",
-        "실행 방식: 규칙 + 최근 사건 기억 · 로컬/원격 언어 모델 없음",
+        "[대사 엔진]",
+        "실행 방식: 규칙 + 최근 사건 기억",
         f"대사 수: {voice.get('catalog_messages', '-')} / 말수: {voice.get('level', '-')}",
         f"대사집 오류: {voice.get('catalog_errors') or '없음'}", "",
         "[규칙 판단 / 대사]",

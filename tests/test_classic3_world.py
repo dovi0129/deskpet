@@ -1,4 +1,4 @@
-"""rc9-classic3 stage D: the walk."""
+"""The walk."""
 from __future__ import annotations
 
 from pathlib import Path

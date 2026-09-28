@@ -1,4 +1,4 @@
-"""rc9-classic3: video detection tuned on the real laptop, and "watching YouTube"."""
+"""Video detection tuned on the real laptop, and "watching YouTube"."""
 from __future__ import annotations
 
 from collections import Counter

@@ -1,4 +1,4 @@
-"""Independent Classic data with one-time, read-only calibration import."""
+"""Where DeskPet keeps its data, plus a one-time, read-only import of an older temperature calibration."""
 from __future__ import annotations
 import json
 import os
@@ -15,7 +15,7 @@ def data_root() -> Path:
 
 
 def calibration_path() -> Path:
-    """Import only a small calibration file once. Never scan or delete model data.
+    """Import only a small calibration file once; nothing else is read or deleted.
 
     The marker prevents a deliberate reset being silently undone on next launch.
     The temperature manager still validates machine identity and calibration quality.

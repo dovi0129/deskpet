@@ -1,4 +1,4 @@
-"""rc9-classic2: catalog expansion, placeholders, daypart/WORK_LONG facts."""
+"""Catalog expansion, placeholders, daypart/WORK_LONG facts."""
 from __future__ import annotations
 
 from dataclasses import replace

@@ -1,4 +1,4 @@
-﻿# DeskPet v2.3.0 advanced sensor worker
+﻿# DeskPet sensor worker
 # Emits one compact JSON object every ~2 seconds.
 # Uses Windows built-in CIM/WMI providers and, when already available,
 # LibreHardwareMonitor/OpenHardwareMonitor WMI sensors.

@@ -21,7 +21,7 @@ except ImportError:
     root = tk.Tk()
     root.withdraw()
     messagebox.showerror(
-        "DeskPet Classic",
+        "DeskPet",
         "psutil이 설치되어 있지 않아.\n\n"
         "PowerShell에서 아래 명령을 한 번 실행해줘:\n\n"
         "py -m pip install psutil",
@@ -47,7 +47,7 @@ from calendar_facts import date_facts, valid_birthday
 from app_paths import data_root
 
 
-APP_NAME = f"DeskPet Classic {VERSION}"
+APP_NAME = f"DeskPet {VERSION}"
 SAMPLE_MS = 1000
 # Short tick so a 0.15 s blink is visible; the canvas redraws only when a glyph changes.
 ANIM_MS = 120
@@ -205,7 +205,6 @@ class DeskPet:
         config_dir = Path(sys.executable).resolve().parent if getattr(sys, "frozen", False) else self.base_dir
         self.config_path = config_dir / "config.json"
         self.config = self._load_config()
-        # Lab servers are watched by the separate ServerCat program (ZenPet\ServerCat).
 
         self.pet_name = str(self.config.get("pet_name") or "DeskPet").strip() or "DeskPet"
         self.device_name_override = str(self.config.get("device_name") or "").strip()
@@ -225,7 +224,7 @@ class DeskPet:
         self.ui_scale = max(.75, min(3.0, float(self.root.tk.call("tk", "scaling")) / (96.0 / 72.0)))
         for name in ("PET_WIDTH", "PET_HEIGHT", "EXPANDED_PET_HEIGHT", "DETAIL_WIDTH", "DETAIL_HEIGHT", "DETAIL_HEIGHT_NPU", "DETAIL_CONTENT_WIDTH"):
             setattr(self, name, round(globals()[name] * self.ui_scale))
-        self.root.title(f"{self.pet_name} Classic · {VERSION}")
+        self.root.title(f"{self.pet_name} · {VERSION}")
         self.root.overrideredirect(True)
         self.root.attributes("-topmost", bool(self.config.get("always_on_top", True)))
         self.root.configure(bg=PANEL_BG)
@@ -1181,10 +1180,10 @@ class DeskPet:
                               "context_epoch": self._context_epoch, "snapshot_id": s.snapshot_id},
                                   voice={"mode": self.voice_mode, "level": self.voice.level,
                               "rule_line": self.speech.text if self.speech else "",
-                              "engine": "Classic rules + recent events",
+                              "engine": "rules + recent events",
                               "catalog_messages": len(self.voice.catalog.messages),
                               "catalog_errors": list(self.voice.catalog.errors)},
-                                  # Moved off the card in classic2; kept here so nothing is lost.
+                                  # Not shown on the card; kept for the diagnostics report.
                                   # A bare computer name can identify a person, so it is not exported.
                                   device={"name": (self.device_full_name if self.device_name_source != "computer name"
                                                    else "(컴퓨터 이름 · 진단에서 생략)"),
@@ -1319,7 +1318,7 @@ class DeskPet:
     @classmethod
     def _split_frame_lines(cls, frame_text: str) -> list[str]:
         # Keep every cat line at a fixed width (7 small / 11 large). Stripping and
-        # re-centering (classic1) shifted the paws by half a cell when a tail was added.
+        # re-centering shifted the paws by half a cell when a tail was added.
         raw = str(frame_text).splitlines()
         large = len(raw) > 3
         width, height = (LARGE_W, LARGE_H) if large else (FRAME_W, 3)

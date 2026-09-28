@@ -2,7 +2,7 @@
 setlocal
 cd /d "%~dp0"
 chcp 65001 >nul
-title DeskPet Classic 2.4 Debug
+title DeskPet Debug
 where py >nul 2>&1
 if not errorlevel 1 goto USE_PY
 where python >nul 2>&1

@@ -27,7 +27,7 @@ FRAMES = {
         " /\\_/\\\n( ¬_¬ )\n > ^ <",
     ],
     "VIDEO": [
-        # "▷" was here before classic2: it is not in Consolas and shifted the paw line.
+        # Not "▷": it is not in Consolas and shifts the paw line.
         " /\\_/\\\n( o.o )\n > ^ <",
         " /\\_/\\\n( -.- )\n > ^ <",
     ],
@@ -82,7 +82,7 @@ FRAMES = {
         " /\\_/\\\n( -.- )\n > ^ <",
     ],
     "PETTING": [
-        # "‿" was here before classic2: it is not in Consolas.
+        # Not "‿": it is not in Consolas.
         " /\\_/\\\n( ˘ω˘ )\n > ♥ <",
         " /\\_/\\\n( ^ω^ )\n > ♥ <",
     ],
@@ -130,7 +130,7 @@ WALK_B = " < ^ > "   # alternates with PAWS while walking
 REACTIONS = {"eat": 1.6, "startle": 1.0, "peek": 2.0, "groom": 1.6, "greet": 1.2,
              "stretch": 2.0, "yawn": 2.0}
 
-TICK_S = 1.4  # cadence of the per-state frame cycle (unchanged from classic1)
+TICK_S = 1.4  # cadence of the per-state frame cycle
 
 # Large cat: the small 3-line cat (ears, face, paws) is set into a 5 x 11 body, so
 # every expression, blink, glance and reaction works unchanged in both sizes.

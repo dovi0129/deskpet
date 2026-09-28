@@ -1,4 +1,4 @@
-"""rc9-classic3 stage B: affection, daily summary, special days."""
+"""Affection, daily summary, special days."""
 from __future__ import annotations
 
 from dataclasses import replace

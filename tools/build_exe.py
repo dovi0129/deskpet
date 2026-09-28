@@ -1,11 +1,10 @@
-"""Build a Python-free Windows copy for sharing: DeskPet\\DeskPet.exe, zipped.
+"""Build the Windows release: DeskPet\\DeskPet.exe (PyInstaller, one folder), zipped.
 
-Run with a Python that has psutil and PyInstaller (e.g. C:\\venvs\\deskpet-build):
-    python tools\\build_exe.py --out ..\\..\\DeskPet_classic3_windows.zip
+Run with a Python that has psutil and PyInstaller:
+    python tools\\build_exe.py --out DeskPet-1.0.0-windows.zip
 
-The shared copy starts from clean defaults (no birthday). The user's own config.json is
-never copied. DeskPet no longer watches lab servers (that is ZenPet\\ServerCat), so no
-addresses can leak into the shared copy.
+The release starts from clean defaults; a local config.json is never copied, and the
+build stops if any source file contains an IP address.
 """
 from __future__ import annotations
 
@@ -24,12 +23,12 @@ NOT_SHIPPED = {"gui_smoke.py", "self_test.py"}
 DATA_FILES = ("voice_catalog.json", "deskpet_probe.ps1")
 IPV4 = re.compile(r"\b\d{1,3}(?:\.\d{1,3}){3}\b")
 
-README = """DeskPet Classic 2.4.0-rc9-classic3 (Windows)
+README = """DeskPet {version} (Windows)
 
 실행
 - 압축을 푼 뒤 DeskPet 폴더 안의 DeskPet.exe를 더블클릭합니다.
 - 처음 실행할 때 "Windows의 PC 보호" 창이 뜨면 [추가 정보] → [실행]을 누릅니다.
-  (서명하지 않은 개인 프로그램이라 뜨는 창입니다.)
+  (코드 서명을 하지 않은 프로그램이라 뜨는 창입니다.)
 - _internal 폴더는 지우거나 옮기지 마세요. DeskPet.exe와 같이 있어야 합니다.
 - 바탕화면·문서처럼 쓰기 가능한 곳에 풀어 주세요(Program Files 안은 설정 저장이 막힐 수 있음).
 
@@ -69,7 +68,8 @@ def build(src: Path, work: Path) -> Path:
     dist = work / "dist" / "DeskPet"
     assert (dist / "DeskPet.exe").is_file()
     assert not (dist / "config.json").exists()
-    (dist / "읽어주세요.txt").write_text(README, encoding="utf-8-sig", newline="\r\n")
+    version = re.search(r'^VERSION = "([^"]+)"', (src / "diagnostics.py").read_text(encoding="utf-8"), re.M).group(1)
+    (dist / "읽어주세요.txt").write_text(README.replace("{version}", version), encoding="utf-8-sig", newline="\r\n")
     return dist
 
 

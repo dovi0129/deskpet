@@ -1,4 +1,4 @@
-"""rc9-classic3 stage A: pointer gaze/chase, pick-up, event reactions, stretch reminder."""
+"""Pointer gaze/chase, pick-up, event reactions, stretch reminder."""
 from __future__ import annotations
 
 from collections import deque

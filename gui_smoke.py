@@ -93,7 +93,7 @@ try:
             nb=app.card.cat_bbox
             assert (nb[0]+nb[2])/2==cx, 'accessory moved cat'
         app.ask_rule_voice_now()
-        assert not hasattr(app, 'gemma'), 'Classic includes model client'
+        assert not hasattr(app, 'gemma'), 'no language-model client'
         app.inspect_status_now()
         assert app.status_button.cget('text') == '상태'
         s.npu=0.0;s.npu_valid=True

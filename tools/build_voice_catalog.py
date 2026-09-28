@@ -1,6 +1,6 @@
 """Rebuild voice_catalog.json from the original 140 lines + tools/voice_lines.py.
 
-Input is always tools/voice_catalog_base140.json (the untouched rc9-classic1
+Input is always tools/voice_catalog_base140.json (the original
 catalog), so running this twice gives the same file. DEDUPE edits the text of
 three original ids. The result is then
 loaded with the real VoiceCatalog loader; any error aborts without writing.

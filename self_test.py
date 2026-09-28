@@ -401,7 +401,7 @@ def run():
     test_catalog_failure_and_model_free_config()
     assert len(set(FRAMES["SLEEP"])) == 1
     assert all("z" not in frame.lower() for frame in FRAMES["SLEEP"])
-    print("DeskPet v2.4.0-rc9-classic3 regression self-test: OK")
+    print("DeskPet regression self-test: OK")
 
 
 if __name__ == "__main__":

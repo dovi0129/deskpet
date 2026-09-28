@@ -71,7 +71,7 @@ print('NO_MODEL_IMPORTS')
         self.assertEqual(cfg['voice']['mode'], 'rule')
         self.assertEqual(cfg['voice']['level'], 'quiet')
         self.assertNotIn('gemma', cfg)
-        self.assertNotIn('servers', cfg)   # server watching moved to ServerCat
+        self.assertNotIn('servers', cfg)   # retired key
         self.assertEqual((cfg['x'],cfg['y'],cfg['pet_name'],cfg['transparent']), (13,25,'콩이',False))
         self.assertEqual(json.loads((self.root/'config.pre-classic.backup.json').read_text()),old)
         self.assertEqual(json.loads(path.read_text()),old)
@@ -128,7 +128,7 @@ print('NO_MODEL_IMPORTS')
         text=readable_summary({'npu_counter':{'present':True,'counter_valid':False},
                                 'voice':{'mode':'rule','catalog_messages':140,'level':'normal'},
                                 'gemma':{'status':'ERROR'}})
-        self.assertIn('Classic 대사 엔진',text)
+        self.assertIn('[대사 엔진]',text)
         self.assertIn('Windows 센서',text)
         self.assertNotIn('NPU_COMPILE',text)
         self.assertNotIn('EXAONE',text)

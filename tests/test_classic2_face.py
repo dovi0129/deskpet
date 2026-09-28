@@ -1,4 +1,4 @@
-"""rc9-classic2: idle face motion, and ASCII art that can never break."""
+"""Idle face motion, and ASCII art that can never break."""
 from __future__ import annotations
 
 import string

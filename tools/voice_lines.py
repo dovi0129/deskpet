@@ -1,4 +1,4 @@
-"""Source lines for the rc9-classic2 catalog expansion.
+"""Source lines added on top of the original 140-line catalog.
 
 Persona: a cynical, lazy, secretly caring cat. Casual speech, the user is "집사",
 electricity is "밥", heat is fur getting cooked. No insults, no profanity.
@@ -270,7 +270,7 @@ NEW_INTENTS = [
 ]
 
 
-# classic3: affection and special days. Rare conditions get a higher weight so the
+# Affection and special days. Rare conditions get a higher weight so the
 # few lines actually show up among ~80 everyday lines of the same intent.
 def _v(base, extra, family, weight, lines):
     return dict(base=base, extra=extra, family=family, weight=weight, lines=lines)
@@ -324,7 +324,7 @@ VARIANTS += [
 ]
 
 
-# classic3: YouTube on screen while the video decoder runs (window title checked for
+# YouTube on screen while the video decoder runs (window title checked for
 # "YouTube" only; the video itself is unknown, so no line guesses what it is about).
 VARIANTS += [
     _v("VIDEO", ["YOUTUBE_PLAYING"], "video_youtube", 2.0, [

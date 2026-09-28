@@ -1,4 +1,4 @@
-"""rc9-classic3 stage C: large cat (5 x 11) with sit / loaf / lie poses."""
+"""Large cat (5 x 11) with sit / loaf / lie poses."""
 from __future__ import annotations
 
 from pathlib import Path

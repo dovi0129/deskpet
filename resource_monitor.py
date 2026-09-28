@@ -1,4 +1,4 @@
-"""Low-frequency process-tree accounting; no model imports or command lines."""
+"""Low-frequency process-tree accounting; command lines are never read."""
 from __future__ import annotations
 import os
 import threading

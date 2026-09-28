@@ -6,3 +6,4 @@ tests/last_*.txt
 build/
 dist/
 *.spec
+*.zip

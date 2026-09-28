@@ -1,4 +1,4 @@
-"""Edition-specific config migration; old model settings are not used."""
+"""Config loading and validation; keys this version does not use are dropped."""
 from __future__ import annotations
 import copy
 import json
@@ -11,12 +11,11 @@ DEFAULT = {
     "voice": {"mode": "rule", "level": "normal", "recent_limit": 12,
               "family_cooldown_s": 60, "show_transient_when_collapsed": True},
     "migration_notice_pending": False,
-    # classic3
     "birthday": "",              # "MM-DD" only; the year is never stored
     "daily_summary_hour": 18,    # evening summary after this local hour
     "cat_size": "small",         # "small" | "large"
     "walk": {"enabled": False, "interval_min": 3},
-    # "servers" / "server_cat" were dropped: lab servers are watched by ZenPet\ServerCat.
+    # Retired keys (e.g. "servers", "server_cat") are dropped on the next save.
 }
 
 
