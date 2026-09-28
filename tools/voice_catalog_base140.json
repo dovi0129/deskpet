@@ -1,0 +1,2892 @@
+{
+  "schema_version": 1,
+  "messages": [
+    {
+      "id": "thermal_critical_001",
+      "intent": "THERMAL_CRITICAL",
+      "text": "너무 뜨겁다",
+      "family": "thermal_critical",
+      "requires_all": [
+        "THERMAL_CRITICAL"
+      ],
+      "requires_any": [],
+      "forbids": [],
+      "claims": [
+        "THERMAL_CRITICAL"
+      ],
+      "event": null,
+      "priority": 100,
+      "weight": 1.0,
+      "cooldown_s": 40,
+      "ttl_s": 10
+    },
+    {
+      "id": "thermal_critical_002",
+      "intent": "THERMAL_CRITICAL",
+      "text": "이건 좀 심한데",
+      "family": "thermal_critical",
+      "requires_all": [
+        "THERMAL_CRITICAL"
+      ],
+      "requires_any": [],
+      "forbids": [],
+      "claims": [
+        "THERMAL_CRITICAL"
+      ],
+      "event": null,
+      "priority": 100,
+      "weight": 1.0,
+      "cooldown_s": 40,
+      "ttl_s": 10
+    },
+    {
+      "id": "thermal_critical_003",
+      "intent": "THERMAL_CRITICAL",
+      "text": "좀 식혀줘",
+      "family": "thermal_critical",
+      "requires_all": [
+        "THERMAL_CRITICAL"
+      ],
+      "requires_any": [],
+      "forbids": [],
+      "claims": [
+        "THERMAL_CRITICAL"
+      ],
+      "event": null,
+      "priority": 100,
+      "weight": 1.0,
+      "cooldown_s": 40,
+      "ttl_s": 10
+    },
+    {
+      "id": "thermal_critical_004",
+      "intent": "THERMAL_CRITICAL",
+      "text": "불판 아니다",
+      "family": "thermal_critical",
+      "requires_all": [
+        "THERMAL_CRITICAL"
+      ],
+      "requires_any": [],
+      "forbids": [],
+      "claims": [
+        "THERMAL_CRITICAL"
+      ],
+      "event": null,
+      "priority": 100,
+      "weight": 1.0,
+      "cooldown_s": 40,
+      "ttl_s": 10
+    },
+    {
+      "id": "thermal_critical_005",
+      "intent": "THERMAL_CRITICAL",
+      "text": "잠깐 쉬자",
+      "family": "thermal_critical",
+      "requires_all": [
+        "THERMAL_CRITICAL"
+      ],
+      "requires_any": [],
+      "forbids": [],
+      "claims": [
+        "THERMAL_CRITICAL"
+      ],
+      "event": null,
+      "priority": 100,
+      "weight": 1.0,
+      "cooldown_s": 40,
+      "ttl_s": 10
+    },
+    {
+      "id": "thermal_critical_006",
+      "intent": "THERMAL_CRITICAL",
+      "text": "열이 너무 올랐다",
+      "family": "thermal_critical",
+      "requires_all": [
+        "THERMAL_CRITICAL"
+      ],
+      "requires_any": [],
+      "forbids": [],
+      "claims": [
+        "THERMAL_CRITICAL"
+      ],
+      "event": null,
+      "priority": 100,
+      "weight": 1.0,
+      "cooldown_s": 40,
+      "ttl_s": 10
+    },
+    {
+      "id": "battery_critical_007",
+      "intent": "BATTERY_CRITICAL",
+      "text": "밥 좀 줘",
+      "family": "battery_critical",
+      "requires_all": [
+        "BATTERY_CRITICAL",
+        "POWER_DISCHARGING"
+      ],
+      "requires_any": [],
+      "forbids": [],
+      "claims": [
+        "BATTERY_CRITICAL",
+        "POWER_DISCHARGING"
+      ],
+      "event": null,
+      "priority": 90,
+      "weight": 1.0,
+      "cooldown_s": 45,
+      "ttl_s": 10
+    },
+    {
+      "id": "battery_critical_008",
+      "intent": "BATTERY_CRITICAL",
+      "text": "전기부터 줘",
+      "family": "battery_critical",
+      "requires_all": [
+        "BATTERY_CRITICAL",
+        "POWER_DISCHARGING"
+      ],
+      "requires_any": [],
+      "forbids": [],
+      "claims": [
+        "BATTERY_CRITICAL",
+        "POWER_DISCHARGING"
+      ],
+      "event": null,
+      "priority": 90,
+      "weight": 1.0,
+      "cooldown_s": 45,
+      "ttl_s": 10
+    },
+    {
+      "id": "battery_critical_009",
+      "intent": "BATTERY_CRITICAL",
+      "text": "밥.",
+      "family": "battery_critical",
+      "requires_all": [
+        "BATTERY_CRITICAL",
+        "POWER_DISCHARGING"
+      ],
+      "requires_any": [],
+      "forbids": [],
+      "claims": [
+        "BATTERY_CRITICAL",
+        "POWER_DISCHARGING"
+      ],
+      "event": null,
+      "priority": 90,
+      "weight": 1.0,
+      "cooldown_s": 45,
+      "ttl_s": 10
+    },
+    {
+      "id": "battery_critical_010",
+      "intent": "BATTERY_CRITICAL",
+      "text": "충전기 어디 갔어",
+      "family": "battery_critical",
+      "requires_all": [
+        "BATTERY_CRITICAL",
+        "POWER_DISCHARGING"
+      ],
+      "requires_any": [],
+      "forbids": [],
+      "claims": [
+        "BATTERY_CRITICAL",
+        "POWER_DISCHARGING"
+      ],
+      "event": null,
+      "priority": 90,
+      "weight": 1.0,
+      "cooldown_s": 45,
+      "ttl_s": 10
+    },
+    {
+      "id": "battery_critical_011",
+      "intent": "BATTERY_CRITICAL",
+      "text": "진짜 배고프다",
+      "family": "battery_critical",
+      "requires_all": [
+        "BATTERY_CRITICAL",
+        "POWER_DISCHARGING"
+      ],
+      "requires_any": [],
+      "forbids": [],
+      "claims": [
+        "BATTERY_CRITICAL",
+        "POWER_DISCHARGING"
+      ],
+      "event": null,
+      "priority": 90,
+      "weight": 1.0,
+      "cooldown_s": 45,
+      "ttl_s": 10
+    },
+    {
+      "id": "battery_critical_012",
+      "intent": "BATTERY_CRITICAL",
+      "text": "전기부터 줘",
+      "family": "battery_critical",
+      "requires_all": [
+        "BATTERY_CRITICAL",
+        "POWER_DISCHARGING"
+      ],
+      "requires_any": [],
+      "forbids": [],
+      "claims": [
+        "BATTERY_CRITICAL",
+        "POWER_DISCHARGING"
+      ],
+      "event": null,
+      "priority": 90,
+      "weight": 1.0,
+      "cooldown_s": 45,
+      "ttl_s": 10
+    },
+    {
+      "id": "thermal_hot_013",
+      "intent": "THERMAL_HOT",
+      "text": "좀 뜨겁네",
+      "family": "thermal_hot",
+      "requires_all": [
+        "THERMAL_HOT"
+      ],
+      "requires_any": [],
+      "forbids": [],
+      "claims": [
+        "THERMAL_HOT"
+      ],
+      "event": null,
+      "priority": 80,
+      "weight": 1.0,
+      "cooldown_s": 50,
+      "ttl_s": 10
+    },
+    {
+      "id": "thermal_hot_014",
+      "intent": "THERMAL_HOT",
+      "text": "열 오른다",
+      "family": "thermal_hot",
+      "requires_all": [
+        "THERMAL_HOT"
+      ],
+      "requires_any": [],
+      "forbids": [],
+      "claims": [
+        "THERMAL_HOT"
+      ],
+      "event": null,
+      "priority": 80,
+      "weight": 1.0,
+      "cooldown_s": 50,
+      "ttl_s": 10
+    },
+    {
+      "id": "thermal_hot_015",
+      "intent": "THERMAL_HOT",
+      "text": "슬슬 뜨거운데",
+      "family": "thermal_hot",
+      "requires_all": [
+        "THERMAL_HOT"
+      ],
+      "requires_any": [],
+      "forbids": [],
+      "claims": [
+        "THERMAL_HOT"
+      ],
+      "event": null,
+      "priority": 80,
+      "weight": 1.0,
+      "cooldown_s": 50,
+      "ttl_s": 10
+    },
+    {
+      "id": "thermal_hot_016",
+      "intent": "THERMAL_HOT",
+      "text": "이건 좀 더운데",
+      "family": "thermal_hot",
+      "requires_all": [
+        "THERMAL_HOT"
+      ],
+      "requires_any": [],
+      "forbids": [],
+      "claims": [
+        "THERMAL_HOT"
+      ],
+      "event": null,
+      "priority": 80,
+      "weight": 1.0,
+      "cooldown_s": 50,
+      "ttl_s": 10
+    },
+    {
+      "id": "thermal_hot_017",
+      "intent": "THERMAL_HOT",
+      "text": "조금만 살살",
+      "family": "thermal_hot",
+      "requires_all": [
+        "THERMAL_HOT"
+      ],
+      "requires_any": [],
+      "forbids": [],
+      "claims": [
+        "THERMAL_HOT"
+      ],
+      "event": null,
+      "priority": 80,
+      "weight": 1.0,
+      "cooldown_s": 50,
+      "ttl_s": 10
+    },
+    {
+      "id": "thermal_hot_018",
+      "intent": "THERMAL_HOT",
+      "text": "열 받는 중",
+      "family": "thermal_hot",
+      "requires_all": [
+        "THERMAL_HOT"
+      ],
+      "requires_any": [],
+      "forbids": [],
+      "claims": [
+        "THERMAL_HOT"
+      ],
+      "event": null,
+      "priority": 80,
+      "weight": 1.0,
+      "cooldown_s": 50,
+      "ttl_s": 10
+    },
+    {
+      "id": "thermal_hot_019",
+      "intent": "THERMAL_HOT",
+      "text": "뜨끈하구먼",
+      "family": "thermal_hot",
+      "requires_all": [
+        "THERMAL_HOT"
+      ],
+      "requires_any": [],
+      "forbids": [],
+      "claims": [
+        "THERMAL_HOT"
+      ],
+      "event": null,
+      "priority": 80,
+      "weight": 1.0,
+      "cooldown_s": 50,
+      "ttl_s": 10
+    },
+    {
+      "id": "thermal_cooling_020",
+      "intent": "THERMAL_COOLING",
+      "text": "열 빼는 중",
+      "family": "thermal_cooling",
+      "requires_all": [
+        "THERMAL_COOLING"
+      ],
+      "requires_any": [],
+      "forbids": [],
+      "claims": [
+        "THERMAL_COOLING"
+      ],
+      "event": null,
+      "priority": 80,
+      "weight": 1.0,
+      "cooldown_s": 50,
+      "ttl_s": 10
+    },
+    {
+      "id": "thermal_cooling_021",
+      "intent": "THERMAL_COOLING",
+      "text": "아까보단 식었네",
+      "family": "thermal_cooling",
+      "requires_all": [
+        "THERMAL_COOLING"
+      ],
+      "requires_any": [],
+      "forbids": [],
+      "claims": [
+        "THERMAL_COOLING"
+      ],
+      "event": null,
+      "priority": 80,
+      "weight": 1.0,
+      "cooldown_s": 50,
+      "ttl_s": 10
+    },
+    {
+      "id": "thermal_cooling_022",
+      "intent": "THERMAL_COOLING",
+      "text": "조금씩 식는다",
+      "family": "thermal_cooling",
+      "requires_all": [
+        "THERMAL_COOLING"
+      ],
+      "requires_any": [],
+      "forbids": [],
+      "claims": [
+        "THERMAL_COOLING"
+      ],
+      "event": null,
+      "priority": 80,
+      "weight": 1.0,
+      "cooldown_s": 50,
+      "ttl_s": 10
+    },
+    {
+      "id": "thermal_cooling_023",
+      "intent": "THERMAL_COOLING",
+      "text": "진정하는 중",
+      "family": "thermal_cooling",
+      "requires_all": [
+        "THERMAL_COOLING"
+      ],
+      "requires_any": [],
+      "forbids": [],
+      "claims": [
+        "THERMAL_COOLING"
+      ],
+      "event": null,
+      "priority": 80,
+      "weight": 1.0,
+      "cooldown_s": 50,
+      "ttl_s": 10
+    },
+    {
+      "id": "thermal_cooling_024",
+      "intent": "THERMAL_COOLING",
+      "text": "열이 내려간다",
+      "family": "thermal_cooling",
+      "requires_all": [
+        "THERMAL_COOLING"
+      ],
+      "requires_any": [],
+      "forbids": [],
+      "claims": [
+        "THERMAL_COOLING"
+      ],
+      "event": null,
+      "priority": 80,
+      "weight": 1.0,
+      "cooldown_s": 50,
+      "ttl_s": 10
+    },
+    {
+      "id": "thermal_cooling_025",
+      "intent": "THERMAL_COOLING",
+      "text": "이제 식는구먼",
+      "family": "thermal_cooling",
+      "requires_all": [
+        "THERMAL_COOLING"
+      ],
+      "requires_any": [],
+      "forbids": [],
+      "claims": [
+        "THERMAL_COOLING"
+      ],
+      "event": null,
+      "priority": 80,
+      "weight": 1.0,
+      "cooldown_s": 50,
+      "ttl_s": 10
+    },
+    {
+      "id": "thermal_relief_026",
+      "intent": "THERMAL_RELIEF",
+      "text": "후...",
+      "family": "thermal_relief",
+      "requires_all": [
+        "THERMAL_RELIEF"
+      ],
+      "requires_any": [],
+      "forbids": [],
+      "claims": [
+        "THERMAL_RELIEF"
+      ],
+      "event": null,
+      "priority": 80,
+      "weight": 1.0,
+      "cooldown_s": 50,
+      "ttl_s": 8
+    },
+    {
+      "id": "thermal_relief_027",
+      "intent": "THERMAL_RELIEF",
+      "text": "좀 살겠다",
+      "family": "thermal_relief",
+      "requires_all": [
+        "THERMAL_RELIEF"
+      ],
+      "requires_any": [],
+      "forbids": [],
+      "claims": [
+        "THERMAL_RELIEF"
+      ],
+      "event": null,
+      "priority": 80,
+      "weight": 1.0,
+      "cooldown_s": 50,
+      "ttl_s": 8
+    },
+    {
+      "id": "thermal_relief_028",
+      "intent": "THERMAL_RELIEF",
+      "text": "이제 좀 낫네",
+      "family": "thermal_relief",
+      "requires_all": [
+        "THERMAL_RELIEF"
+      ],
+      "requires_any": [],
+      "forbids": [],
+      "claims": [
+        "THERMAL_RELIEF"
+      ],
+      "event": null,
+      "priority": 80,
+      "weight": 1.0,
+      "cooldown_s": 50,
+      "ttl_s": 8
+    },
+    {
+      "id": "thermal_relief_029",
+      "intent": "THERMAL_RELIEF",
+      "text": "살았다",
+      "family": "thermal_relief",
+      "requires_all": [
+        "THERMAL_RELIEF"
+      ],
+      "requires_any": [],
+      "forbids": [],
+      "claims": [
+        "THERMAL_RELIEF"
+      ],
+      "event": null,
+      "priority": 80,
+      "weight": 1.0,
+      "cooldown_s": 50,
+      "ttl_s": 8
+    },
+    {
+      "id": "thermal_relief_030",
+      "intent": "THERMAL_RELIEF",
+      "text": "한결 낫다",
+      "family": "thermal_relief",
+      "requires_all": [
+        "THERMAL_RELIEF"
+      ],
+      "requires_any": [],
+      "forbids": [],
+      "claims": [
+        "THERMAL_RELIEF"
+      ],
+      "event": null,
+      "priority": 80,
+      "weight": 1.0,
+      "cooldown_s": 50,
+      "ttl_s": 8
+    },
+    {
+      "id": "thermal_relief_031",
+      "intent": "THERMAL_RELIEF",
+      "text": "이제 괜찮네",
+      "family": "thermal_relief",
+      "requires_all": [
+        "THERMAL_RELIEF"
+      ],
+      "requires_any": [],
+      "forbids": [],
+      "claims": [
+        "THERMAL_RELIEF"
+      ],
+      "event": null,
+      "priority": 80,
+      "weight": 1.0,
+      "cooldown_s": 50,
+      "ttl_s": 8
+    },
+    {
+      "id": "battery_low_032",
+      "intent": "BATTERY_LOW",
+      "text": "밥 좀 줘",
+      "family": "battery_low",
+      "requires_all": [
+        "BATTERY_LOW",
+        "POWER_DISCHARGING"
+      ],
+      "requires_any": [],
+      "forbids": [],
+      "claims": [
+        "BATTERY_LOW",
+        "POWER_DISCHARGING"
+      ],
+      "event": null,
+      "priority": 70,
+      "weight": 1.0,
+      "cooldown_s": 60,
+      "ttl_s": 10
+    },
+    {
+      "id": "battery_low_033",
+      "intent": "BATTERY_LOW",
+      "text": "배고파진다",
+      "family": "battery_low",
+      "requires_all": [
+        "BATTERY_LOW",
+        "POWER_DISCHARGING"
+      ],
+      "requires_any": [],
+      "forbids": [],
+      "claims": [
+        "BATTERY_LOW",
+        "POWER_DISCHARGING"
+      ],
+      "event": null,
+      "priority": 70,
+      "weight": 1.0,
+      "cooldown_s": 60,
+      "ttl_s": 10
+    },
+    {
+      "id": "battery_low_034",
+      "intent": "BATTERY_LOW",
+      "text": "전기 좀 줘",
+      "family": "battery_low",
+      "requires_all": [
+        "BATTERY_LOW",
+        "POWER_DISCHARGING"
+      ],
+      "requires_any": [],
+      "forbids": [],
+      "claims": [
+        "BATTERY_LOW",
+        "POWER_DISCHARGING"
+      ],
+      "event": null,
+      "priority": 70,
+      "weight": 1.0,
+      "cooldown_s": 60,
+      "ttl_s": 10
+    },
+    {
+      "id": "battery_low_035",
+      "intent": "BATTERY_LOW",
+      "text": "충전기 좀 줘",
+      "family": "battery_low",
+      "requires_all": [
+        "BATTERY_LOW",
+        "POWER_DISCHARGING"
+      ],
+      "requires_any": [],
+      "forbids": [],
+      "claims": [
+        "BATTERY_LOW",
+        "POWER_DISCHARGING"
+      ],
+      "event": null,
+      "priority": 70,
+      "weight": 1.0,
+      "cooldown_s": 60,
+      "ttl_s": 10
+    },
+    {
+      "id": "battery_low_036",
+      "intent": "BATTERY_LOW",
+      "text": "밥부터 줘",
+      "family": "battery_low",
+      "requires_all": [
+        "BATTERY_LOW",
+        "POWER_DISCHARGING"
+      ],
+      "requires_any": [],
+      "forbids": [],
+      "claims": [
+        "BATTERY_LOW",
+        "POWER_DISCHARGING"
+      ],
+      "event": null,
+      "priority": 70,
+      "weight": 1.0,
+      "cooldown_s": 60,
+      "ttl_s": 10
+    },
+    {
+      "id": "battery_low_037",
+      "intent": "BATTERY_LOW",
+      "text": "전기 어디 갔어",
+      "family": "battery_low",
+      "requires_all": [
+        "BATTERY_LOW",
+        "POWER_DISCHARGING"
+      ],
+      "requires_any": [],
+      "forbids": [],
+      "claims": [
+        "BATTERY_LOW",
+        "POWER_DISCHARGING"
+      ],
+      "event": null,
+      "priority": 70,
+      "weight": 1.0,
+      "cooldown_s": 60,
+      "ttl_s": 10
+    },
+    {
+      "id": "battery_low_038",
+      "intent": "BATTERY_LOW",
+      "text": "슬슬 힘 빠진다",
+      "family": "battery_low",
+      "requires_all": [
+        "BATTERY_LOW",
+        "POWER_DISCHARGING"
+      ],
+      "requires_any": [],
+      "forbids": [],
+      "claims": [
+        "BATTERY_LOW",
+        "POWER_DISCHARGING"
+      ],
+      "event": null,
+      "priority": 70,
+      "weight": 1.0,
+      "cooldown_s": 60,
+      "ttl_s": 10
+    },
+    {
+      "id": "ram_pressure_039",
+      "intent": "RAM_PRESSURE",
+      "text": "메모리가 빡빡하다",
+      "family": "ram_pressure",
+      "requires_all": [
+        "RAM_PRESSURE"
+      ],
+      "requires_any": [],
+      "forbids": [],
+      "claims": [
+        "RAM_PRESSURE"
+      ],
+      "event": null,
+      "priority": 60,
+      "weight": 1.0,
+      "cooldown_s": 60,
+      "ttl_s": 10
+    },
+    {
+      "id": "ram_pressure_040",
+      "intent": "RAM_PRESSURE",
+      "text": "램이 좀 답답하네",
+      "family": "ram_pressure",
+      "requires_all": [
+        "RAM_PRESSURE"
+      ],
+      "requires_any": [],
+      "forbids": [],
+      "claims": [
+        "RAM_PRESSURE"
+      ],
+      "event": null,
+      "priority": 60,
+      "weight": 1.0,
+      "cooldown_s": 60,
+      "ttl_s": 10
+    },
+    {
+      "id": "ram_pressure_041",
+      "intent": "RAM_PRESSURE",
+      "text": "자리 좀 비워줘",
+      "family": "ram_pressure",
+      "requires_all": [
+        "RAM_PRESSURE"
+      ],
+      "requires_any": [],
+      "forbids": [],
+      "claims": [
+        "RAM_PRESSURE"
+      ],
+      "event": null,
+      "priority": 60,
+      "weight": 1.0,
+      "cooldown_s": 60,
+      "ttl_s": 10
+    },
+    {
+      "id": "ram_pressure_042",
+      "intent": "RAM_PRESSURE",
+      "text": "메모리 꽉 차간다",
+      "family": "ram_pressure",
+      "requires_all": [
+        "RAM_PRESSURE"
+      ],
+      "requires_any": [],
+      "forbids": [],
+      "claims": [
+        "RAM_PRESSURE"
+      ],
+      "event": null,
+      "priority": 60,
+      "weight": 1.0,
+      "cooldown_s": 60,
+      "ttl_s": 10
+    },
+    {
+      "id": "ram_pressure_043",
+      "intent": "RAM_PRESSURE",
+      "text": "램 숨 막힌다",
+      "family": "ram_pressure",
+      "requires_all": [
+        "RAM_PRESSURE"
+      ],
+      "requires_any": [],
+      "forbids": [],
+      "claims": [
+        "RAM_PRESSURE"
+      ],
+      "event": null,
+      "priority": 60,
+      "weight": 1.0,
+      "cooldown_s": 60,
+      "ttl_s": 10
+    },
+    {
+      "id": "cpu_busy_044",
+      "intent": "CPU_BUSY",
+      "text": "머리 쓰는 중",
+      "family": "cpu_busy",
+      "requires_all": [
+        "CPU_BUSY"
+      ],
+      "requires_any": [],
+      "forbids": [],
+      "claims": [
+        "CPU_BUSY"
+      ],
+      "event": null,
+      "priority": 60,
+      "weight": 1.0,
+      "cooldown_s": 60,
+      "ttl_s": 10
+    },
+    {
+      "id": "cpu_busy_045",
+      "intent": "CPU_BUSY",
+      "text": "CPU 바쁘다",
+      "family": "cpu_busy",
+      "requires_all": [
+        "CPU_BUSY"
+      ],
+      "requires_any": [],
+      "forbids": [],
+      "claims": [
+        "CPU_BUSY"
+      ],
+      "event": null,
+      "priority": 60,
+      "weight": 1.0,
+      "cooldown_s": 60,
+      "ttl_s": 10
+    },
+    {
+      "id": "cpu_busy_046",
+      "intent": "CPU_BUSY",
+      "text": "계산 중",
+      "family": "cpu_busy",
+      "requires_all": [
+        "CPU_BUSY"
+      ],
+      "requires_any": [],
+      "forbids": [],
+      "claims": [
+        "CPU_BUSY"
+      ],
+      "event": null,
+      "priority": 60,
+      "weight": 1.0,
+      "cooldown_s": 60,
+      "ttl_s": 10
+    },
+    {
+      "id": "cpu_busy_047",
+      "intent": "CPU_BUSY",
+      "text": "머리가 바쁘다",
+      "family": "cpu_busy",
+      "requires_all": [
+        "CPU_BUSY"
+      ],
+      "requires_any": [],
+      "forbids": [],
+      "claims": [
+        "CPU_BUSY"
+      ],
+      "event": null,
+      "priority": 60,
+      "weight": 1.0,
+      "cooldown_s": 60,
+      "ttl_s": 10
+    },
+    {
+      "id": "cpu_busy_048",
+      "intent": "CPU_BUSY",
+      "text": "뭔가 열심히 푸는 중",
+      "family": "cpu_busy",
+      "requires_all": [
+        "CPU_BUSY"
+      ],
+      "requires_any": [],
+      "forbids": [],
+      "claims": [
+        "CPU_BUSY"
+      ],
+      "event": null,
+      "priority": 60,
+      "weight": 1.0,
+      "cooldown_s": 60,
+      "ttl_s": 10
+    },
+    {
+      "id": "cpu_busy_049",
+      "intent": "CPU_BUSY",
+      "text": "CPU 열일 중",
+      "family": "cpu_busy",
+      "requires_all": [
+        "CPU_BUSY"
+      ],
+      "requires_any": [],
+      "forbids": [],
+      "claims": [
+        "CPU_BUSY"
+      ],
+      "event": null,
+      "priority": 60,
+      "weight": 1.0,
+      "cooldown_s": 60,
+      "ttl_s": 10
+    },
+    {
+      "id": "gpu_busy_050",
+      "intent": "GPU_BUSY",
+      "text": "GPU 일한다",
+      "family": "gpu_busy",
+      "requires_all": [
+        "GPU_BUSY"
+      ],
+      "requires_any": [],
+      "forbids": [],
+      "claims": [
+        "GPU_BUSY"
+      ],
+      "event": null,
+      "priority": 60,
+      "weight": 1.0,
+      "cooldown_s": 60,
+      "ttl_s": 10
+    },
+    {
+      "id": "gpu_busy_051",
+      "intent": "GPU_BUSY",
+      "text": "그래픽 쪽 바쁘네",
+      "family": "gpu_busy",
+      "requires_all": [
+        "GPU_BUSY"
+      ],
+      "requires_any": [],
+      "forbids": [],
+      "claims": [
+        "GPU_BUSY"
+      ],
+      "event": null,
+      "priority": 60,
+      "weight": 1.0,
+      "cooldown_s": 60,
+      "ttl_s": 10
+    },
+    {
+      "id": "gpu_busy_052",
+      "intent": "GPU_BUSY",
+      "text": "GPU 열일 중",
+      "family": "gpu_busy",
+      "requires_all": [
+        "GPU_BUSY"
+      ],
+      "requires_any": [],
+      "forbids": [],
+      "claims": [
+        "GPU_BUSY"
+      ],
+      "event": null,
+      "priority": 60,
+      "weight": 1.0,
+      "cooldown_s": 60,
+      "ttl_s": 10
+    },
+    {
+      "id": "gpu_busy_053",
+      "intent": "GPU_BUSY",
+      "text": "저쪽도 바쁘네",
+      "family": "gpu_busy",
+      "requires_all": [
+        "GPU_BUSY"
+      ],
+      "requires_any": [],
+      "forbids": [],
+      "claims": [
+        "GPU_BUSY"
+      ],
+      "event": null,
+      "priority": 60,
+      "weight": 1.0,
+      "cooldown_s": 60,
+      "ttl_s": 10
+    },
+    {
+      "id": "gpu_busy_054",
+      "intent": "GPU_BUSY",
+      "text": "GPU가 바쁘다",
+      "family": "gpu_busy",
+      "requires_all": [
+        "GPU_BUSY"
+      ],
+      "requires_any": [],
+      "forbids": [],
+      "claims": [
+        "GPU_BUSY"
+      ],
+      "event": null,
+      "priority": 60,
+      "weight": 1.0,
+      "cooldown_s": 60,
+      "ttl_s": 10
+    },
+    {
+      "id": "both_busy_055",
+      "intent": "BOTH_BUSY",
+      "text": "다 같이 일한다",
+      "family": "both_busy",
+      "requires_all": [
+        "CPU_BUSY",
+        "GPU_BUSY"
+      ],
+      "requires_any": [],
+      "forbids": [],
+      "claims": [
+        "CPU_BUSY",
+        "GPU_BUSY"
+      ],
+      "event": null,
+      "priority": 62,
+      "weight": 1.0,
+      "cooldown_s": 60,
+      "ttl_s": 10
+    },
+    {
+      "id": "both_busy_056",
+      "intent": "BOTH_BUSY",
+      "text": "총동원이다",
+      "family": "both_busy",
+      "requires_all": [
+        "CPU_BUSY",
+        "GPU_BUSY"
+      ],
+      "requires_any": [],
+      "forbids": [],
+      "claims": [
+        "CPU_BUSY",
+        "GPU_BUSY"
+      ],
+      "event": null,
+      "priority": 62,
+      "weight": 1.0,
+      "cooldown_s": 60,
+      "ttl_s": 10
+    },
+    {
+      "id": "both_busy_057",
+      "intent": "BOTH_BUSY",
+      "text": "풀가동 중",
+      "family": "both_busy",
+      "requires_all": [
+        "CPU_BUSY",
+        "GPU_BUSY"
+      ],
+      "requires_any": [],
+      "forbids": [],
+      "claims": [
+        "CPU_BUSY",
+        "GPU_BUSY"
+      ],
+      "event": null,
+      "priority": 62,
+      "weight": 1.0,
+      "cooldown_s": 60,
+      "ttl_s": 10
+    },
+    {
+      "id": "both_busy_058",
+      "intent": "BOTH_BUSY",
+      "text": "다들 바쁘네",
+      "family": "both_busy",
+      "requires_all": [
+        "CPU_BUSY",
+        "GPU_BUSY"
+      ],
+      "requires_any": [],
+      "forbids": [],
+      "claims": [
+        "CPU_BUSY",
+        "GPU_BUSY"
+      ],
+      "event": null,
+      "priority": 62,
+      "weight": 1.0,
+      "cooldown_s": 60,
+      "ttl_s": 10
+    },
+    {
+      "id": "both_busy_059",
+      "intent": "BOTH_BUSY",
+      "text": "오늘 좀 바쁘네",
+      "family": "both_busy",
+      "requires_all": [
+        "CPU_BUSY",
+        "GPU_BUSY"
+      ],
+      "requires_any": [],
+      "forbids": [],
+      "claims": [
+        "CPU_BUSY",
+        "GPU_BUSY"
+      ],
+      "event": null,
+      "priority": 62,
+      "weight": 1.0,
+      "cooldown_s": 60,
+      "ttl_s": 10
+    },
+    {
+      "id": "user_returned_060",
+      "intent": "USER_RETURNED",
+      "text": "왔냐",
+      "family": "user_return",
+      "requires_all": [
+        "PRESENCE_PRESENT"
+      ],
+      "requires_any": [],
+      "forbids": [],
+      "claims": [
+        "PRESENCE_PRESENT"
+      ],
+      "event": {
+        "kind": "USER_RETURNED",
+        "max_age_s": 30
+      },
+      "priority": 50,
+      "weight": 1.0,
+      "cooldown_s": 60,
+      "ttl_s": 8
+    },
+    {
+      "id": "user_returned_061",
+      "intent": "USER_RETURNED",
+      "text": "돌아왔네",
+      "family": "user_return",
+      "requires_all": [
+        "PRESENCE_PRESENT"
+      ],
+      "requires_any": [],
+      "forbids": [],
+      "claims": [
+        "PRESENCE_PRESENT"
+      ],
+      "event": {
+        "kind": "USER_RETURNED",
+        "max_age_s": 30
+      },
+      "priority": 50,
+      "weight": 1.0,
+      "cooldown_s": 60,
+      "ttl_s": 8
+    },
+    {
+      "id": "user_returned_062",
+      "intent": "USER_RETURNED",
+      "text": "다시 왔구먼",
+      "family": "user_return",
+      "requires_all": [
+        "PRESENCE_PRESENT"
+      ],
+      "requires_any": [],
+      "forbids": [],
+      "claims": [
+        "PRESENCE_PRESENT"
+      ],
+      "event": {
+        "kind": "USER_RETURNED",
+        "max_age_s": 30
+      },
+      "priority": 50,
+      "weight": 1.0,
+      "cooldown_s": 60,
+      "ttl_s": 8
+    },
+    {
+      "id": "user_returned_063",
+      "intent": "USER_RETURNED",
+      "text": "쉬다 왔냐",
+      "family": "user_return",
+      "requires_all": [
+        "PRESENCE_PRESENT"
+      ],
+      "requires_any": [],
+      "forbids": [],
+      "claims": [
+        "PRESENCE_PRESENT"
+      ],
+      "event": {
+        "kind": "USER_RETURNED",
+        "max_age_s": 30
+      },
+      "priority": 50,
+      "weight": 1.0,
+      "cooldown_s": 60,
+      "ttl_s": 8
+    },
+    {
+      "id": "user_returned_064",
+      "intent": "USER_RETURNED",
+      "text": "또 시작인가",
+      "family": "user_return",
+      "requires_all": [
+        "PRESENCE_PRESENT"
+      ],
+      "requires_any": [],
+      "forbids": [],
+      "claims": [
+        "PRESENCE_PRESENT"
+      ],
+      "event": {
+        "kind": "USER_RETURNED",
+        "max_age_s": 30
+      },
+      "priority": 50,
+      "weight": 1.0,
+      "cooldown_s": 60,
+      "ttl_s": 8
+    },
+    {
+      "id": "claude_appeared_065",
+      "intent": "CLAUDE_APPEARED",
+      "text": "Claude 켰네",
+      "family": "claude_appeared",
+      "requires_all": [
+        "TOOL_CLAUDE_PRESENT"
+      ],
+      "requires_any": [],
+      "forbids": [],
+      "claims": [
+        "TOOL_CLAUDE_PRESENT"
+      ],
+      "event": {
+        "kind": "TOOL_APPEARED",
+        "subject": "Claude",
+        "max_age_s": 30
+      },
+      "priority": 50,
+      "weight": 1.0,
+      "cooldown_s": 90,
+      "ttl_s": 8
+    },
+    {
+      "id": "claude_appeared_066",
+      "intent": "CLAUDE_APPEARED",
+      "text": "Claude 왔구먼",
+      "family": "claude_appeared",
+      "requires_all": [
+        "TOOL_CLAUDE_PRESENT"
+      ],
+      "requires_any": [],
+      "forbids": [],
+      "claims": [
+        "TOOL_CLAUDE_PRESENT"
+      ],
+      "event": {
+        "kind": "TOOL_APPEARED",
+        "subject": "Claude",
+        "max_age_s": 30
+      },
+      "priority": 50,
+      "weight": 1.0,
+      "cooldown_s": 90,
+      "ttl_s": 8
+    },
+    {
+      "id": "claude_appeared_067",
+      "intent": "CLAUDE_APPEARED",
+      "text": "Claude 실행됨",
+      "family": "claude_appeared",
+      "requires_all": [
+        "TOOL_CLAUDE_PRESENT"
+      ],
+      "requires_any": [],
+      "forbids": [],
+      "claims": [
+        "TOOL_CLAUDE_PRESENT"
+      ],
+      "event": {
+        "kind": "TOOL_APPEARED",
+        "subject": "Claude",
+        "max_age_s": 30
+      },
+      "priority": 50,
+      "weight": 1.0,
+      "cooldown_s": 90,
+      "ttl_s": 8
+    },
+    {
+      "id": "codex_appeared_068",
+      "intent": "CODEX_APPEARED",
+      "text": "Codex 켰네",
+      "family": "codex_appeared",
+      "requires_all": [
+        "TOOL_CODEX_PRESENT"
+      ],
+      "requires_any": [],
+      "forbids": [],
+      "claims": [
+        "TOOL_CODEX_PRESENT"
+      ],
+      "event": {
+        "kind": "TOOL_APPEARED",
+        "subject": "Codex",
+        "max_age_s": 30
+      },
+      "priority": 50,
+      "weight": 1.0,
+      "cooldown_s": 90,
+      "ttl_s": 8
+    },
+    {
+      "id": "codex_appeared_069",
+      "intent": "CODEX_APPEARED",
+      "text": "Codex 왔네",
+      "family": "codex_appeared",
+      "requires_all": [
+        "TOOL_CODEX_PRESENT"
+      ],
+      "requires_any": [],
+      "forbids": [],
+      "claims": [
+        "TOOL_CODEX_PRESENT"
+      ],
+      "event": {
+        "kind": "TOOL_APPEARED",
+        "subject": "Codex",
+        "max_age_s": 30
+      },
+      "priority": 50,
+      "weight": 1.0,
+      "cooldown_s": 90,
+      "ttl_s": 8
+    },
+    {
+      "id": "codex_appeared_070",
+      "intent": "CODEX_APPEARED",
+      "text": "Codex 실행됨",
+      "family": "codex_appeared",
+      "requires_all": [
+        "TOOL_CODEX_PRESENT"
+      ],
+      "requires_any": [],
+      "forbids": [],
+      "claims": [
+        "TOOL_CODEX_PRESENT"
+      ],
+      "event": {
+        "kind": "TOOL_APPEARED",
+        "subject": "Codex",
+        "max_age_s": 30
+      },
+      "priority": 50,
+      "weight": 1.0,
+      "cooldown_s": 90,
+      "ttl_s": 8
+    },
+    {
+      "id": "ssh_appeared_071",
+      "intent": "SSH_APPEARED",
+      "text": "SSH 켰네",
+      "family": "ssh_appeared",
+      "requires_all": [
+        "TOOL_SSH_PRESENT"
+      ],
+      "requires_any": [],
+      "forbids": [],
+      "claims": [
+        "TOOL_SSH_PRESENT"
+      ],
+      "event": {
+        "kind": "TOOL_APPEARED",
+        "subject": "SSH",
+        "max_age_s": 30
+      },
+      "priority": 50,
+      "weight": 1.0,
+      "cooldown_s": 90,
+      "ttl_s": 8
+    },
+    {
+      "id": "ssh_appeared_072",
+      "intent": "SSH_APPEARED",
+      "text": "SSH 열었네",
+      "family": "ssh_appeared",
+      "requires_all": [
+        "TOOL_SSH_PRESENT"
+      ],
+      "requires_any": [],
+      "forbids": [],
+      "claims": [
+        "TOOL_SSH_PRESENT"
+      ],
+      "event": {
+        "kind": "TOOL_APPEARED",
+        "subject": "SSH",
+        "max_age_s": 30
+      },
+      "priority": 50,
+      "weight": 1.0,
+      "cooldown_s": 90,
+      "ttl_s": 8
+    },
+    {
+      "id": "ssh_appeared_073",
+      "intent": "SSH_APPEARED",
+      "text": "SSH 실행됨",
+      "family": "ssh_appeared",
+      "requires_all": [
+        "TOOL_SSH_PRESENT"
+      ],
+      "requires_any": [],
+      "forbids": [],
+      "claims": [
+        "TOOL_SSH_PRESENT"
+      ],
+      "event": {
+        "kind": "TOOL_APPEARED",
+        "subject": "SSH",
+        "max_age_s": 30
+      },
+      "priority": 50,
+      "weight": 1.0,
+      "cooldown_s": 90,
+      "ttl_s": 8
+    },
+    {
+      "id": "claude_disappeared_074",
+      "intent": "CLAUDE_DISAPPEARED",
+      "text": "Claude 닫혔다",
+      "family": "claude_disappeared",
+      "requires_all": [],
+      "requires_any": [],
+      "forbids": [
+        "TOOL_CLAUDE_PRESENT"
+      ],
+      "claims": [],
+      "event": {
+        "kind": "TOOL_DISAPPEARED",
+        "subject": "Claude",
+        "max_age_s": 30
+      },
+      "priority": 50,
+      "weight": 1.0,
+      "cooldown_s": 90,
+      "ttl_s": 8
+    },
+    {
+      "id": "claude_disappeared_075",
+      "intent": "CLAUDE_DISAPPEARED",
+      "text": "Claude 갔네",
+      "family": "claude_disappeared",
+      "requires_all": [],
+      "requires_any": [],
+      "forbids": [
+        "TOOL_CLAUDE_PRESENT"
+      ],
+      "claims": [],
+      "event": {
+        "kind": "TOOL_DISAPPEARED",
+        "subject": "Claude",
+        "max_age_s": 30
+      },
+      "priority": 50,
+      "weight": 1.0,
+      "cooldown_s": 90,
+      "ttl_s": 8
+    },
+    {
+      "id": "claude_disappeared_076",
+      "intent": "CLAUDE_DISAPPEARED",
+      "text": "Claude 종료됨",
+      "family": "claude_disappeared",
+      "requires_all": [],
+      "requires_any": [],
+      "forbids": [
+        "TOOL_CLAUDE_PRESENT"
+      ],
+      "claims": [],
+      "event": {
+        "kind": "TOOL_DISAPPEARED",
+        "subject": "Claude",
+        "max_age_s": 30
+      },
+      "priority": 50,
+      "weight": 1.0,
+      "cooldown_s": 90,
+      "ttl_s": 8
+    },
+    {
+      "id": "codex_disappeared_077",
+      "intent": "CODEX_DISAPPEARED",
+      "text": "Codex 닫혔다",
+      "family": "codex_disappeared",
+      "requires_all": [],
+      "requires_any": [],
+      "forbids": [
+        "TOOL_CODEX_PRESENT"
+      ],
+      "claims": [],
+      "event": {
+        "kind": "TOOL_DISAPPEARED",
+        "subject": "Codex",
+        "max_age_s": 30
+      },
+      "priority": 50,
+      "weight": 1.0,
+      "cooldown_s": 90,
+      "ttl_s": 8
+    },
+    {
+      "id": "codex_disappeared_078",
+      "intent": "CODEX_DISAPPEARED",
+      "text": "Codex 갔네",
+      "family": "codex_disappeared",
+      "requires_all": [],
+      "requires_any": [],
+      "forbids": [
+        "TOOL_CODEX_PRESENT"
+      ],
+      "claims": [],
+      "event": {
+        "kind": "TOOL_DISAPPEARED",
+        "subject": "Codex",
+        "max_age_s": 30
+      },
+      "priority": 50,
+      "weight": 1.0,
+      "cooldown_s": 90,
+      "ttl_s": 8
+    },
+    {
+      "id": "codex_disappeared_079",
+      "intent": "CODEX_DISAPPEARED",
+      "text": "Codex 종료됨",
+      "family": "codex_disappeared",
+      "requires_all": [],
+      "requires_any": [],
+      "forbids": [
+        "TOOL_CODEX_PRESENT"
+      ],
+      "claims": [],
+      "event": {
+        "kind": "TOOL_DISAPPEARED",
+        "subject": "Codex",
+        "max_age_s": 30
+      },
+      "priority": 50,
+      "weight": 1.0,
+      "cooldown_s": 90,
+      "ttl_s": 8
+    },
+    {
+      "id": "ssh_disappeared_080",
+      "intent": "SSH_DISAPPEARED",
+      "text": "SSH 닫혔다",
+      "family": "ssh_disappeared",
+      "requires_all": [],
+      "requires_any": [],
+      "forbids": [
+        "TOOL_SSH_PRESENT"
+      ],
+      "claims": [],
+      "event": {
+        "kind": "TOOL_DISAPPEARED",
+        "subject": "SSH",
+        "max_age_s": 30
+      },
+      "priority": 50,
+      "weight": 1.0,
+      "cooldown_s": 90,
+      "ttl_s": 8
+    },
+    {
+      "id": "ssh_disappeared_081",
+      "intent": "SSH_DISAPPEARED",
+      "text": "SSH 갔네",
+      "family": "ssh_disappeared",
+      "requires_all": [],
+      "requires_any": [],
+      "forbids": [
+        "TOOL_SSH_PRESENT"
+      ],
+      "claims": [],
+      "event": {
+        "kind": "TOOL_DISAPPEARED",
+        "subject": "SSH",
+        "max_age_s": 30
+      },
+      "priority": 50,
+      "weight": 1.0,
+      "cooldown_s": 90,
+      "ttl_s": 8
+    },
+    {
+      "id": "ssh_disappeared_082",
+      "intent": "SSH_DISAPPEARED",
+      "text": "SSH 종료됨",
+      "family": "ssh_disappeared",
+      "requires_all": [],
+      "requires_any": [],
+      "forbids": [
+        "TOOL_SSH_PRESENT"
+      ],
+      "claims": [],
+      "event": {
+        "kind": "TOOL_DISAPPEARED",
+        "subject": "SSH",
+        "max_age_s": 30
+      },
+      "priority": 50,
+      "weight": 1.0,
+      "cooldown_s": 90,
+      "ttl_s": 8
+    },
+    {
+      "id": "power_connected_083",
+      "intent": "POWER_CONNECTED",
+      "text": "전원 들어왔네",
+      "family": "power_connected",
+      "requires_all": [],
+      "requires_any": [
+        "POWER_CHARGING",
+        "POWER_AC_IDLE",
+        "POWER_AC_UNKNOWN"
+      ],
+      "forbids": [],
+      "claims": [],
+      "event": {
+        "kind": "POWER_CONNECTED",
+        "max_age_s": 30
+      },
+      "priority": 50,
+      "weight": 1.0,
+      "cooldown_s": 90,
+      "ttl_s": 8
+    },
+    {
+      "id": "power_connected_084",
+      "intent": "POWER_CONNECTED",
+      "text": "전기 왔다",
+      "family": "power_connected",
+      "requires_all": [],
+      "requires_any": [
+        "POWER_CHARGING",
+        "POWER_AC_IDLE",
+        "POWER_AC_UNKNOWN"
+      ],
+      "forbids": [],
+      "claims": [],
+      "event": {
+        "kind": "POWER_CONNECTED",
+        "max_age_s": 30
+      },
+      "priority": 50,
+      "weight": 1.0,
+      "cooldown_s": 90,
+      "ttl_s": 8
+    },
+    {
+      "id": "power_connected_085",
+      "intent": "POWER_CONNECTED",
+      "text": "충전기 꽂혔네",
+      "family": "power_connected",
+      "requires_all": [],
+      "requires_any": [
+        "POWER_CHARGING",
+        "POWER_AC_IDLE",
+        "POWER_AC_UNKNOWN"
+      ],
+      "forbids": [],
+      "claims": [],
+      "event": {
+        "kind": "POWER_CONNECTED",
+        "max_age_s": 30
+      },
+      "priority": 50,
+      "weight": 1.0,
+      "cooldown_s": 90,
+      "ttl_s": 8
+    },
+    {
+      "id": "power_disconnected_086",
+      "intent": "POWER_DISCONNECTED",
+      "text": "전원 빠졌네",
+      "family": "power_disconnected",
+      "requires_all": [
+        "POWER_DISCHARGING"
+      ],
+      "requires_any": [],
+      "forbids": [],
+      "claims": [
+        "POWER_DISCHARGING"
+      ],
+      "event": {
+        "kind": "POWER_DISCONNECTED",
+        "max_age_s": 30
+      },
+      "priority": 50,
+      "weight": 1.0,
+      "cooldown_s": 90,
+      "ttl_s": 8
+    },
+    {
+      "id": "power_disconnected_087",
+      "intent": "POWER_DISCONNECTED",
+      "text": "이제 배터리구먼",
+      "family": "power_disconnected",
+      "requires_all": [
+        "POWER_DISCHARGING"
+      ],
+      "requires_any": [],
+      "forbids": [],
+      "claims": [
+        "POWER_DISCHARGING"
+      ],
+      "event": {
+        "kind": "POWER_DISCONNECTED",
+        "max_age_s": 30
+      },
+      "priority": 50,
+      "weight": 1.0,
+      "cooldown_s": 90,
+      "ttl_s": 8
+    },
+    {
+      "id": "power_disconnected_088",
+      "intent": "POWER_DISCONNECTED",
+      "text": "충전기 빠졌네",
+      "family": "power_disconnected",
+      "requires_all": [
+        "POWER_DISCHARGING"
+      ],
+      "requires_any": [],
+      "forbids": [],
+      "claims": [
+        "POWER_DISCHARGING"
+      ],
+      "event": {
+        "kind": "POWER_DISCONNECTED",
+        "max_age_s": 30
+      },
+      "priority": 50,
+      "weight": 1.0,
+      "cooldown_s": 90,
+      "ttl_s": 8
+    },
+    {
+      "id": "work_enter_089",
+      "intent": "WORK_ENTER",
+      "text": "작업 시작했네",
+      "family": "work_enter",
+      "requires_all": [
+        "WORK_ACTIVE"
+      ],
+      "requires_any": [],
+      "forbids": [],
+      "claims": [
+        "WORK_ACTIVE"
+      ],
+      "event": {
+        "kind": "WORK_ENTER",
+        "max_age_s": 60
+      },
+      "priority": 50,
+      "weight": 1.0,
+      "cooldown_s": 60,
+      "ttl_s": 8
+    },
+    {
+      "id": "work_enter_090",
+      "intent": "WORK_ENTER",
+      "text": "또 뭔가 돌린다",
+      "family": "work_enter",
+      "requires_all": [
+        "WORK_ACTIVE"
+      ],
+      "requires_any": [],
+      "forbids": [],
+      "claims": [
+        "WORK_ACTIVE"
+      ],
+      "event": {
+        "kind": "WORK_ENTER",
+        "max_age_s": 60
+      },
+      "priority": 50,
+      "weight": 1.0,
+      "cooldown_s": 60,
+      "ttl_s": 8
+    },
+    {
+      "id": "work_enter_091",
+      "intent": "WORK_ENTER",
+      "text": "일 시작인가",
+      "family": "work_enter",
+      "requires_all": [
+        "WORK_ACTIVE"
+      ],
+      "requires_any": [],
+      "forbids": [],
+      "claims": [
+        "WORK_ACTIVE"
+      ],
+      "event": {
+        "kind": "WORK_ENTER",
+        "max_age_s": 60
+      },
+      "priority": 50,
+      "weight": 1.0,
+      "cooldown_s": 60,
+      "ttl_s": 8
+    },
+    {
+      "id": "work_enter_092",
+      "intent": "WORK_ENTER",
+      "text": "뭔가 굴러간다",
+      "family": "work_enter",
+      "requires_all": [
+        "WORK_ACTIVE"
+      ],
+      "requires_any": [],
+      "forbids": [],
+      "claims": [
+        "WORK_ACTIVE"
+      ],
+      "event": {
+        "kind": "WORK_ENTER",
+        "max_age_s": 60
+      },
+      "priority": 50,
+      "weight": 1.0,
+      "cooldown_s": 60,
+      "ttl_s": 8
+    },
+    {
+      "id": "work_exit_093",
+      "intent": "WORK_EXIT",
+      "text": "조용해졌네",
+      "family": "work_exit",
+      "requires_all": [
+        "WORK_INACTIVE"
+      ],
+      "requires_any": [],
+      "forbids": [],
+      "claims": [
+        "WORK_INACTIVE"
+      ],
+      "event": {
+        "kind": "WORK_EXIT",
+        "max_age_s": 60
+      },
+      "priority": 50,
+      "weight": 1.0,
+      "cooldown_s": 60,
+      "ttl_s": 8
+    },
+    {
+      "id": "work_exit_094",
+      "intent": "WORK_EXIT",
+      "text": "부하가 줄었네",
+      "family": "work_exit",
+      "requires_all": [
+        "WORK_INACTIVE"
+      ],
+      "requires_any": [],
+      "forbids": [],
+      "claims": [
+        "WORK_INACTIVE"
+      ],
+      "event": {
+        "kind": "WORK_EXIT",
+        "max_age_s": 60
+      },
+      "priority": 50,
+      "weight": 1.0,
+      "cooldown_s": 60,
+      "ttl_s": 8
+    },
+    {
+      "id": "work_exit_095",
+      "intent": "WORK_EXIT",
+      "text": "한가해졌다",
+      "family": "work_exit",
+      "requires_all": [
+        "WORK_INACTIVE"
+      ],
+      "requires_any": [],
+      "forbids": [],
+      "claims": [
+        "WORK_INACTIVE"
+      ],
+      "event": {
+        "kind": "WORK_EXIT",
+        "max_age_s": 60
+      },
+      "priority": 50,
+      "weight": 1.0,
+      "cooldown_s": 60,
+      "ttl_s": 8
+    },
+    {
+      "id": "work_exit_096",
+      "intent": "WORK_EXIT",
+      "text": "이제 좀 조용하다",
+      "family": "work_exit",
+      "requires_all": [
+        "WORK_INACTIVE"
+      ],
+      "requires_any": [],
+      "forbids": [],
+      "claims": [
+        "WORK_INACTIVE"
+      ],
+      "event": {
+        "kind": "WORK_EXIT",
+        "max_age_s": 60
+      },
+      "priority": 50,
+      "weight": 1.0,
+      "cooldown_s": 60,
+      "ttl_s": 8
+    },
+    {
+      "id": "low_battery_work_097",
+      "intent": "LOW_BATTERY_WORK",
+      "text": "일은 시키면서 밥은 없네",
+      "family": "low_battery_work",
+      "requires_all": [
+        "BATTERY_LOW",
+        "POWER_DISCHARGING",
+        "WORK_ACTIVE"
+      ],
+      "requires_any": [],
+      "forbids": [],
+      "claims": [
+        "BATTERY_LOW",
+        "POWER_DISCHARGING",
+        "WORK_ACTIVE"
+      ],
+      "event": null,
+      "priority": 72,
+      "weight": 1.0,
+      "cooldown_s": 80,
+      "ttl_s": 10
+    },
+    {
+      "id": "low_battery_work_098",
+      "intent": "LOW_BATTERY_WORK",
+      "text": "밥부터 주고 일시키자",
+      "family": "low_battery_work",
+      "requires_all": [
+        "BATTERY_LOW",
+        "POWER_DISCHARGING",
+        "WORK_ACTIVE"
+      ],
+      "requires_any": [],
+      "forbids": [],
+      "claims": [
+        "BATTERY_LOW",
+        "POWER_DISCHARGING",
+        "WORK_ACTIVE"
+      ],
+      "event": null,
+      "priority": 72,
+      "weight": 1.0,
+      "cooldown_s": 80,
+      "ttl_s": 10
+    },
+    {
+      "id": "low_battery_work_099",
+      "intent": "LOW_BATTERY_WORK",
+      "text": "배고픈데 일하는 중",
+      "family": "low_battery_work",
+      "requires_all": [
+        "BATTERY_LOW",
+        "POWER_DISCHARGING",
+        "WORK_ACTIVE"
+      ],
+      "requires_any": [],
+      "forbids": [],
+      "claims": [
+        "BATTERY_LOW",
+        "POWER_DISCHARGING",
+        "WORK_ACTIVE"
+      ],
+      "event": null,
+      "priority": 72,
+      "weight": 1.0,
+      "cooldown_s": 80,
+      "ttl_s": 10
+    },
+    {
+      "id": "low_battery_work_100",
+      "intent": "LOW_BATTERY_WORK",
+      "text": "일감 말고 전기 줘",
+      "family": "low_battery_work",
+      "requires_all": [
+        "BATTERY_LOW",
+        "POWER_DISCHARGING",
+        "WORK_ACTIVE"
+      ],
+      "requires_any": [],
+      "forbids": [],
+      "claims": [
+        "BATTERY_LOW",
+        "POWER_DISCHARGING",
+        "WORK_ACTIVE"
+      ],
+      "event": null,
+      "priority": 72,
+      "weight": 1.0,
+      "cooldown_s": 80,
+      "ttl_s": 10
+    },
+    {
+      "id": "low_battery_work_101",
+      "intent": "LOW_BATTERY_WORK",
+      "text": "밥 없으면 힘 빠진다",
+      "family": "low_battery_work",
+      "requires_all": [
+        "BATTERY_LOW",
+        "POWER_DISCHARGING",
+        "WORK_ACTIVE"
+      ],
+      "requires_any": [],
+      "forbids": [],
+      "claims": [
+        "BATTERY_LOW",
+        "POWER_DISCHARGING",
+        "WORK_ACTIVE"
+      ],
+      "event": null,
+      "priority": 72,
+      "weight": 1.0,
+      "cooldown_s": 80,
+      "ttl_s": 10
+    },
+    {
+      "id": "charging_work_102",
+      "intent": "CHARGING_WORK",
+      "text": "밥 먹으면서 일하는 중",
+      "family": "charging_work",
+      "requires_all": [
+        "POWER_CHARGING",
+        "WORK_ACTIVE"
+      ],
+      "requires_any": [],
+      "forbids": [
+        "THERMAL_CRITICAL"
+      ],
+      "claims": [
+        "POWER_CHARGING",
+        "WORK_ACTIVE"
+      ],
+      "event": null,
+      "priority": 40,
+      "weight": 1.0,
+      "cooldown_s": 90,
+      "ttl_s": 10
+    },
+    {
+      "id": "charging_work_103",
+      "intent": "CHARGING_WORK",
+      "text": "밥값은 하는 중",
+      "family": "charging_work",
+      "requires_all": [
+        "POWER_CHARGING",
+        "WORK_ACTIVE"
+      ],
+      "requires_any": [],
+      "forbids": [
+        "THERMAL_CRITICAL"
+      ],
+      "claims": [
+        "POWER_CHARGING",
+        "WORK_ACTIVE"
+      ],
+      "event": null,
+      "priority": 40,
+      "weight": 1.0,
+      "cooldown_s": 90,
+      "ttl_s": 10
+    },
+    {
+      "id": "charging_work_104",
+      "intent": "CHARGING_WORK",
+      "text": "충전도 일도 같이",
+      "family": "charging_work",
+      "requires_all": [
+        "POWER_CHARGING",
+        "WORK_ACTIVE"
+      ],
+      "requires_any": [],
+      "forbids": [
+        "THERMAL_CRITICAL"
+      ],
+      "claims": [
+        "POWER_CHARGING",
+        "WORK_ACTIVE"
+      ],
+      "event": null,
+      "priority": 40,
+      "weight": 1.0,
+      "cooldown_s": 90,
+      "ttl_s": 10
+    },
+    {
+      "id": "charging_work_105",
+      "intent": "CHARGING_WORK",
+      "text": "먹고 일하고 바쁘다",
+      "family": "charging_work",
+      "requires_all": [
+        "POWER_CHARGING",
+        "WORK_ACTIVE"
+      ],
+      "requires_any": [],
+      "forbids": [
+        "THERMAL_CRITICAL"
+      ],
+      "claims": [
+        "POWER_CHARGING",
+        "WORK_ACTIVE"
+      ],
+      "event": null,
+      "priority": 40,
+      "weight": 1.0,
+      "cooldown_s": 90,
+      "ttl_s": 10
+    },
+    {
+      "id": "charging_work_106",
+      "intent": "CHARGING_WORK",
+      "text": "전기 먹으며 일한다",
+      "family": "charging_work",
+      "requires_all": [
+        "POWER_CHARGING",
+        "WORK_ACTIVE"
+      ],
+      "requires_any": [],
+      "forbids": [
+        "THERMAL_CRITICAL"
+      ],
+      "claims": [
+        "POWER_CHARGING",
+        "WORK_ACTIVE"
+      ],
+      "event": null,
+      "priority": 40,
+      "weight": 1.0,
+      "cooldown_s": 90,
+      "ttl_s": 10
+    },
+    {
+      "id": "charging_work_107",
+      "intent": "CHARGING_WORK",
+      "text": "밥 들어오니 할 만하네",
+      "family": "charging_work",
+      "requires_all": [
+        "POWER_CHARGING",
+        "WORK_ACTIVE"
+      ],
+      "requires_any": [],
+      "forbids": [
+        "THERMAL_CRITICAL"
+      ],
+      "claims": [
+        "POWER_CHARGING",
+        "WORK_ACTIVE"
+      ],
+      "event": null,
+      "priority": 40,
+      "weight": 1.0,
+      "cooldown_s": 90,
+      "ttl_s": 10
+    },
+    {
+      "id": "charging_108",
+      "intent": "CHARGING",
+      "text": "밥 먹는 중~",
+      "family": "charging",
+      "requires_all": [
+        "POWER_CHARGING"
+      ],
+      "requires_any": [],
+      "forbids": [
+        "WORK_ACTIVE"
+      ],
+      "claims": [
+        "POWER_CHARGING"
+      ],
+      "event": null,
+      "priority": 30,
+      "weight": 1.0,
+      "cooldown_s": 80,
+      "ttl_s": 10
+    },
+    {
+      "id": "charging_109",
+      "intent": "CHARGING",
+      "text": "밥이다",
+      "family": "charging",
+      "requires_all": [
+        "POWER_CHARGING"
+      ],
+      "requires_any": [],
+      "forbids": [
+        "WORK_ACTIVE"
+      ],
+      "claims": [
+        "POWER_CHARGING"
+      ],
+      "event": null,
+      "priority": 30,
+      "weight": 1.0,
+      "cooldown_s": 80,
+      "ttl_s": 10
+    },
+    {
+      "id": "charging_110",
+      "intent": "CHARGING",
+      "text": "전기 맛있다",
+      "family": "charging",
+      "requires_all": [
+        "POWER_CHARGING"
+      ],
+      "requires_any": [],
+      "forbids": [
+        "WORK_ACTIVE"
+      ],
+      "claims": [
+        "POWER_CHARGING"
+      ],
+      "event": null,
+      "priority": 30,
+      "weight": 1.0,
+      "cooldown_s": 80,
+      "ttl_s": 10
+    },
+    {
+      "id": "charging_111",
+      "intent": "CHARGING",
+      "text": "배 채우는 중",
+      "family": "charging",
+      "requires_all": [
+        "POWER_CHARGING"
+      ],
+      "requires_any": [],
+      "forbids": [
+        "WORK_ACTIVE"
+      ],
+      "claims": [
+        "POWER_CHARGING"
+      ],
+      "event": null,
+      "priority": 30,
+      "weight": 1.0,
+      "cooldown_s": 80,
+      "ttl_s": 10
+    },
+    {
+      "id": "charging_112",
+      "intent": "CHARGING",
+      "text": "충전 중",
+      "family": "charging",
+      "requires_all": [
+        "POWER_CHARGING"
+      ],
+      "requires_any": [],
+      "forbids": [
+        "WORK_ACTIVE"
+      ],
+      "claims": [
+        "POWER_CHARGING"
+      ],
+      "event": null,
+      "priority": 30,
+      "weight": 1.0,
+      "cooldown_s": 80,
+      "ttl_s": 10
+    },
+    {
+      "id": "charging_113",
+      "intent": "CHARGING",
+      "text": "냠냠",
+      "family": "charging",
+      "requires_all": [
+        "POWER_CHARGING"
+      ],
+      "requires_any": [],
+      "forbids": [
+        "WORK_ACTIVE"
+      ],
+      "claims": [
+        "POWER_CHARGING"
+      ],
+      "event": null,
+      "priority": 30,
+      "weight": 1.0,
+      "cooldown_s": 80,
+      "ttl_s": 10
+    },
+    {
+      "id": "charging_114",
+      "intent": "CHARGING",
+      "text": "전기 들어온다",
+      "family": "charging",
+      "requires_all": [
+        "POWER_CHARGING"
+      ],
+      "requires_any": [],
+      "forbids": [
+        "WORK_ACTIVE"
+      ],
+      "claims": [
+        "POWER_CHARGING"
+      ],
+      "event": null,
+      "priority": 30,
+      "weight": 1.0,
+      "cooldown_s": 80,
+      "ttl_s": 10
+    },
+    {
+      "id": "battery_soon_115",
+      "intent": "BATTERY_SOON",
+      "text": "슬슬 밥 생각난다",
+      "family": "battery_soon",
+      "requires_all": [
+        "BATTERY_SOON",
+        "POWER_DISCHARGING"
+      ],
+      "requires_any": [],
+      "forbids": [],
+      "claims": [
+        "BATTERY_SOON",
+        "POWER_DISCHARGING"
+      ],
+      "event": null,
+      "priority": 25,
+      "weight": 1.0,
+      "cooldown_s": 120,
+      "ttl_s": 10
+    },
+    {
+      "id": "battery_soon_116",
+      "intent": "BATTERY_SOON",
+      "text": "밥 조금만 있네",
+      "family": "battery_soon",
+      "requires_all": [
+        "BATTERY_SOON",
+        "POWER_DISCHARGING"
+      ],
+      "requires_any": [],
+      "forbids": [],
+      "claims": [
+        "BATTERY_SOON",
+        "POWER_DISCHARGING"
+      ],
+      "event": null,
+      "priority": 25,
+      "weight": 1.0,
+      "cooldown_s": 120,
+      "ttl_s": 10
+    },
+    {
+      "id": "battery_soon_117",
+      "intent": "BATTERY_SOON",
+      "text": "슬슬 전기 필요하네",
+      "family": "battery_soon",
+      "requires_all": [
+        "BATTERY_SOON",
+        "POWER_DISCHARGING"
+      ],
+      "requires_any": [],
+      "forbids": [],
+      "claims": [
+        "BATTERY_SOON",
+        "POWER_DISCHARGING"
+      ],
+      "event": null,
+      "priority": 25,
+      "weight": 1.0,
+      "cooldown_s": 120,
+      "ttl_s": 10
+    },
+    {
+      "id": "battery_soon_118",
+      "intent": "BATTERY_SOON",
+      "text": "배가 좀 고프네",
+      "family": "battery_soon",
+      "requires_all": [
+        "BATTERY_SOON",
+        "POWER_DISCHARGING"
+      ],
+      "requires_any": [],
+      "forbids": [],
+      "claims": [
+        "BATTERY_SOON",
+        "POWER_DISCHARGING"
+      ],
+      "event": null,
+      "priority": 25,
+      "weight": 1.0,
+      "cooldown_s": 120,
+      "ttl_s": 10
+    },
+    {
+      "id": "working_119",
+      "intent": "WORKING",
+      "text": "일하는 중~",
+      "family": "working",
+      "requires_all": [
+        "WORK_ACTIVE"
+      ],
+      "requires_any": [],
+      "forbids": [],
+      "claims": [
+        "WORK_ACTIVE"
+      ],
+      "event": null,
+      "priority": 30,
+      "weight": 1.0,
+      "cooldown_s": 70,
+      "ttl_s": 10
+    },
+    {
+      "id": "working_120",
+      "intent": "WORKING",
+      "text": "뭔가 굴러간다",
+      "family": "working",
+      "requires_all": [
+        "WORK_ACTIVE"
+      ],
+      "requires_any": [],
+      "forbids": [],
+      "claims": [
+        "WORK_ACTIVE"
+      ],
+      "event": null,
+      "priority": 30,
+      "weight": 1.0,
+      "cooldown_s": 70,
+      "ttl_s": 10
+    },
+    {
+      "id": "working_121",
+      "intent": "WORKING",
+      "text": "조용히 일하는 중",
+      "family": "working",
+      "requires_all": [
+        "WORK_ACTIVE"
+      ],
+      "requires_any": [],
+      "forbids": [],
+      "claims": [
+        "WORK_ACTIVE"
+      ],
+      "event": null,
+      "priority": 30,
+      "weight": 1.0,
+      "cooldown_s": 70,
+      "ttl_s": 10
+    },
+    {
+      "id": "working_122",
+      "intent": "WORKING",
+      "text": "시킨 거 하는 중",
+      "family": "working",
+      "requires_all": [
+        "WORK_ACTIVE"
+      ],
+      "requires_any": [],
+      "forbids": [],
+      "claims": [
+        "WORK_ACTIVE"
+      ],
+      "event": null,
+      "priority": 30,
+      "weight": 1.0,
+      "cooldown_s": 70,
+      "ttl_s": 10
+    },
+    {
+      "id": "working_123",
+      "intent": "WORKING",
+      "text": "슬슬 바빠진다",
+      "family": "working",
+      "requires_all": [
+        "WORK_ACTIVE"
+      ],
+      "requires_any": [],
+      "forbids": [],
+      "claims": [
+        "WORK_ACTIVE"
+      ],
+      "event": null,
+      "priority": 30,
+      "weight": 1.0,
+      "cooldown_s": 70,
+      "ttl_s": 10
+    },
+    {
+      "id": "working_124",
+      "intent": "WORKING",
+      "text": "일은 내가 하지",
+      "family": "working",
+      "requires_all": [
+        "WORK_ACTIVE"
+      ],
+      "requires_any": [],
+      "forbids": [],
+      "claims": [
+        "WORK_ACTIVE"
+      ],
+      "event": null,
+      "priority": 30,
+      "weight": 1.0,
+      "cooldown_s": 70,
+      "ttl_s": 10
+    },
+    {
+      "id": "working_125",
+      "intent": "WORKING",
+      "text": "적당히 바쁘네",
+      "family": "working",
+      "requires_all": [
+        "WORK_ACTIVE"
+      ],
+      "requires_any": [],
+      "forbids": [],
+      "claims": [
+        "WORK_ACTIVE"
+      ],
+      "event": null,
+      "priority": 30,
+      "weight": 1.0,
+      "cooldown_s": 70,
+      "ttl_s": 10
+    },
+    {
+      "id": "working_126",
+      "intent": "WORKING",
+      "text": "뭔가 하는 중",
+      "family": "working",
+      "requires_all": [
+        "WORK_ACTIVE"
+      ],
+      "requires_any": [],
+      "forbids": [],
+      "claims": [
+        "WORK_ACTIVE"
+      ],
+      "event": null,
+      "priority": 30,
+      "weight": 1.0,
+      "cooldown_s": 70,
+      "ttl_s": 10
+    },
+    {
+      "id": "video_127",
+      "intent": "VIDEO",
+      "text": "영상 처리 중",
+      "family": "video",
+      "requires_all": [
+        "VIDEO_ENGINE_ACTIVE"
+      ],
+      "requires_any": [],
+      "forbids": [],
+      "claims": [
+        "VIDEO_ENGINE_ACTIVE"
+      ],
+      "event": null,
+      "priority": 35,
+      "weight": 1.0,
+      "cooldown_s": 90,
+      "ttl_s": 10
+    },
+    {
+      "id": "video_128",
+      "intent": "VIDEO",
+      "text": "디코딩 중",
+      "family": "video",
+      "requires_all": [
+        "VIDEO_ENGINE_ACTIVE"
+      ],
+      "requires_any": [],
+      "forbids": [],
+      "claims": [
+        "VIDEO_ENGINE_ACTIVE"
+      ],
+      "event": null,
+      "priority": 35,
+      "weight": 1.0,
+      "cooldown_s": 90,
+      "ttl_s": 10
+    },
+    {
+      "id": "video_129",
+      "intent": "VIDEO",
+      "text": "영상 쪽 일한다",
+      "family": "video",
+      "requires_all": [
+        "VIDEO_ENGINE_ACTIVE"
+      ],
+      "requires_any": [],
+      "forbids": [],
+      "claims": [
+        "VIDEO_ENGINE_ACTIVE"
+      ],
+      "event": null,
+      "priority": 35,
+      "weight": 1.0,
+      "cooldown_s": 90,
+      "ttl_s": 10
+    },
+    {
+      "id": "warm_130",
+      "intent": "WARM",
+      "text": "좀 따뜻하네",
+      "family": "thermal_warm",
+      "requires_all": [
+        "THERMAL_WARM"
+      ],
+      "requires_any": [],
+      "forbids": [],
+      "claims": [
+        "THERMAL_WARM"
+      ],
+      "event": null,
+      "priority": 35,
+      "weight": 1.0,
+      "cooldown_s": 90,
+      "ttl_s": 10
+    },
+    {
+      "id": "warm_131",
+      "intent": "WARM",
+      "text": "슬슬 따뜻하네",
+      "family": "thermal_warm",
+      "requires_all": [
+        "THERMAL_WARM"
+      ],
+      "requires_any": [],
+      "forbids": [],
+      "claims": [
+        "THERMAL_WARM"
+      ],
+      "event": null,
+      "priority": 35,
+      "weight": 1.0,
+      "cooldown_s": 90,
+      "ttl_s": 10
+    },
+    {
+      "id": "warm_132",
+      "intent": "WARM",
+      "text": "살짝 데워졌네",
+      "family": "thermal_warm",
+      "requires_all": [
+        "THERMAL_WARM"
+      ],
+      "requires_any": [],
+      "forbids": [],
+      "claims": [
+        "THERMAL_WARM"
+      ],
+      "event": null,
+      "priority": 35,
+      "weight": 1.0,
+      "cooldown_s": 90,
+      "ttl_s": 10
+    },
+    {
+      "id": "warm_133",
+      "intent": "WARM",
+      "text": "조금 뜨끈하네",
+      "family": "thermal_warm",
+      "requires_all": [
+        "THERMAL_WARM"
+      ],
+      "requires_any": [],
+      "forbids": [],
+      "claims": [
+        "THERMAL_WARM"
+      ],
+      "event": null,
+      "priority": 35,
+      "weight": 1.0,
+      "cooldown_s": 90,
+      "ttl_s": 10
+    },
+    {
+      "id": "chill_134",
+      "intent": "CHILL",
+      "text": "조용하네",
+      "family": "chill",
+      "requires_all": [
+        "LOW_LOAD",
+        "THERMAL_NORMAL"
+      ],
+      "requires_any": [],
+      "forbids": [],
+      "claims": [
+        "LOW_LOAD",
+        "THERMAL_NORMAL"
+      ],
+      "event": null,
+      "priority": 10,
+      "weight": 1.0,
+      "cooldown_s": 90,
+      "ttl_s": 10
+    },
+    {
+      "id": "chill_135",
+      "intent": "CHILL",
+      "text": "평화롭군",
+      "family": "chill",
+      "requires_all": [
+        "LOW_LOAD",
+        "THERMAL_NORMAL"
+      ],
+      "requires_any": [],
+      "forbids": [],
+      "claims": [
+        "LOW_LOAD",
+        "THERMAL_NORMAL"
+      ],
+      "event": null,
+      "priority": 10,
+      "weight": 1.0,
+      "cooldown_s": 90,
+      "ttl_s": 10
+    },
+    {
+      "id": "chill_136",
+      "intent": "CHILL",
+      "text": "별일 없네",
+      "family": "chill",
+      "requires_all": [
+        "LOW_LOAD",
+        "THERMAL_NORMAL"
+      ],
+      "requires_any": [],
+      "forbids": [],
+      "claims": [
+        "LOW_LOAD",
+        "THERMAL_NORMAL"
+      ],
+      "event": null,
+      "priority": 10,
+      "weight": 1.0,
+      "cooldown_s": 90,
+      "ttl_s": 10
+    },
+    {
+      "id": "chill_137",
+      "intent": "CHILL",
+      "text": "여유롭다",
+      "family": "chill",
+      "requires_all": [
+        "LOW_LOAD",
+        "THERMAL_NORMAL"
+      ],
+      "requires_any": [],
+      "forbids": [],
+      "claims": [
+        "LOW_LOAD",
+        "THERMAL_NORMAL"
+      ],
+      "event": null,
+      "priority": 10,
+      "weight": 1.0,
+      "cooldown_s": 90,
+      "ttl_s": 10
+    },
+    {
+      "id": "chill_138",
+      "intent": "CHILL",
+      "text": "그냥 쉬는 중",
+      "family": "chill",
+      "requires_all": [
+        "LOW_LOAD",
+        "THERMAL_NORMAL"
+      ],
+      "requires_any": [],
+      "forbids": [],
+      "claims": [
+        "LOW_LOAD",
+        "THERMAL_NORMAL"
+      ],
+      "event": null,
+      "priority": 10,
+      "weight": 1.0,
+      "cooldown_s": 90,
+      "ttl_s": 10
+    },
+    {
+      "id": "chill_139",
+      "intent": "CHILL",
+      "text": "오늘은 조용하네",
+      "family": "chill",
+      "requires_all": [
+        "LOW_LOAD",
+        "THERMAL_NORMAL"
+      ],
+      "requires_any": [],
+      "forbids": [],
+      "claims": [
+        "LOW_LOAD",
+        "THERMAL_NORMAL"
+      ],
+      "event": null,
+      "priority": 10,
+      "weight": 1.0,
+      "cooldown_s": 90,
+      "ttl_s": 10
+    },
+    {
+      "id": "chill_140",
+      "intent": "CHILL",
+      "text": "한가하구먼",
+      "family": "chill",
+      "requires_all": [
+        "LOW_LOAD",
+        "THERMAL_NORMAL"
+      ],
+      "requires_any": [],
+      "forbids": [],
+      "claims": [
+        "LOW_LOAD",
+        "THERMAL_NORMAL"
+      ],
+      "event": null,
+      "priority": 10,
+      "weight": 1.0,
+      "cooldown_s": 90,
+      "ttl_s": 10
+    }
+  ]
+}

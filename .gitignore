@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+config.json
+config.*.json
+tests/last_*.txt
+build/
+dist/
+*.spec
