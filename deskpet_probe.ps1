@@ -416,6 +416,7 @@ while ($true) {
     }
 
     $gpuValid = $false
+    $luidUse = @{}
     try {
         $rows = @(Get-CimInstance Win32_PerfFormattedData_GPUPerformanceCounters_GPUEngine -Property Name,UtilizationPercentage -ErrorAction Stop)
         $gpuValid = $true
@@ -424,9 +425,13 @@ while ($true) {
         foreach ($row in $rows) {
             $u = 0.0
             try { $u = [double]$row.UtilizationPercentage } catch { $u = 0.0 }
+            $name = [string]$row.Name
+            # Every adapter LUID seen, idle ones too, so DeskPet can tell 0% from a missing GPU.
+            if ($name -match 'luid_(0x[0-9A-Fa-f]+_0x[0-9A-Fa-f]+)_phys_') {
+                if (-not $luidUse.ContainsKey($matches[1])) { $luidUse[$matches[1]] = 0.0 }
+            }
             if ($u -le 0) { continue }
 
-            $name = [string]$row.Name
             $key = $name
             $etype = 'Other'
 
@@ -459,8 +464,15 @@ while ($true) {
             if ($u -gt [double]$cats[$cat]) {
                 $cats[$cat] = $u
             }
+            $lk = ([string]$entry.Key).Split('|')[0]
+            if ($luidUse.ContainsKey($lk) -and $u -gt [double]$luidUse[$lk]) {
+                $luidUse[$lk] = $u
+            }
         }
     } catch {}
+
+    $luidOut = [ordered]@{}
+    foreach ($k in ($luidUse.Keys | Sort-Object)) { $luidOut[[string]$k] = [Math]::Round([double]$luidUse[$k], 1) }
 
     $overall = 0.0
     foreach ($v in $cats.Values) {
@@ -530,6 +542,7 @@ while ($true) {
             video_encode = [Math]::Round([double]$cats['VideoEncode'], 1)
             copy = [Math]::Round([double]$cats['Copy'], 1)
         }
+        gpu_luids = $luidOut
         temperature = $tempObj
         thermal_zone = $thermalObj
         battery = [ordered]@{

@@ -19,6 +19,7 @@ from typing import Dict, Optional
 
 import psutil
 
+from gpu_adapters import Gpu, list_gpus, per_gpu
 from temperature_manager import TemperatureManager
 from window_titles import youtube_on_screen
 
@@ -59,6 +60,7 @@ class AdvancedSnapshot:
     gpu_video_decode: float = 0.0
     gpu_video_encode: float = 0.0
     gpu_copy: float = 0.0
+    gpu_luids: dict[str, float] = field(default_factory=dict)  # adapter LUID -> busiest engine %
     npu_present: bool = False
     npu_overall: Optional[float] = None
     npu_source: str = ""
@@ -137,6 +139,9 @@ class Snapshot:
     tools_scan_status: str = "UNKNOWN"
     tools_scan_seq: int = 0
     youtube_visible: Optional[bool] = None  # a browser window titled "YouTube" is on screen
+    # Two or more GPUs: (label, %) per GPU, e.g. (("iGPU", 3.0), ("dGPU", 71.0)); None = not read.
+    # Empty with one GPU (the card keeps its single GPU row, which is `gpu`).
+    gpu_split: tuple[tuple[str, Optional[float]], ...] = ()
 
 
 class AdvancedProbe:
@@ -218,6 +223,7 @@ class AdvancedProbe:
                     gpu_video_decode=_num(gpu.get("video_decode")),
                     gpu_video_encode=_num(gpu.get("video_encode")),
                     gpu_copy=_num(gpu.get("copy")),
+                    gpu_luids={str(k): _num(v) for k, v in (data.get("gpu_luids") or {}).items()},
                     npu_present=bool(npu.get("present", False)),
                     npu_overall=_opt_num(npu.get("overall")),
                     npu_source=str(npu.get("source") or ""),
@@ -281,6 +287,7 @@ class AdvancedProbe:
                 gpu_video_decode=self.latest.gpu_video_decode,
                 gpu_video_encode=self.latest.gpu_video_encode,
                 gpu_copy=self.latest.gpu_copy,
+                gpu_luids=dict(self.latest.gpu_luids),
                 npu_present=self.latest.npu_present,
                 npu_overall=self.latest.npu_overall,
                 npu_source=self.latest.npu_source,
@@ -786,6 +793,10 @@ class SystemMonitor:
     def __init__(self) -> None:
         self.probe = AdvancedProbe(Path(__file__).with_name("deskpet_probe.ps1"))
         self.probe.start()
+        self._gpus: list[Gpu] = []
+        self._gpu_luids_seen: Optional[frozenset[str]] = None
+        self._gpus_scanned_at = -1e9
+        self._scan_gpus(time.monotonic(), None)
         self.coretemp = CoreTempSharedMemoryReader()
         self.asus_temp = AsusFirmwareTempReader()
         self.temperature = TemperatureManager()
@@ -855,6 +866,30 @@ class SystemMonitor:
         if s.received_at_mono - self._last_log_at >= interval:
             self.diag.event("SENSOR", "snapshot", "정기 센서 요약", temperature=temp, npu=npu, **sensors)
             self._last_log_at = s.received_at_mono
+
+    GPU_RESCAN_S = 60.0
+
+    def _scan_gpus(self, now: float, luids: Optional[frozenset[str]]) -> None:
+        try:
+            self._gpus = list_gpus()
+        except Exception as exc:  # DXGI missing or refused: keep the single overall GPU row
+            self._gpus = []
+            get_diagnostics().exception("SENSOR", "gpu_list_error", exc)
+        self._gpu_luids_seen = luids
+        self._gpus_scanned_at = now
+
+    def _gpu_split(self, adv: AdvancedSnapshot, valid: bool, now: float) -> tuple[tuple[str, Optional[float]], ...]:
+        """Per-GPU use when there are two or more GPUs; () otherwise."""
+        luids = frozenset(k.upper() for k in adv.gpu_luids)
+        if valid and luids and self._gpu_luids_seen is None:
+            self._gpu_luids_seen = luids  # first sample after the start-up scan
+        # A GPU was added, removed or restarted (new LUID): list the GPUs again, at most once a minute.
+        if valid and luids and luids != self._gpu_luids_seen and now - self._gpus_scanned_at >= self.GPU_RESCAN_S:
+            self._scan_gpus(now, luids)
+        if len(self._gpus) < 2:
+            return ()
+        split = per_gpu(self._gpus, adv.gpu_luids if valid else {})
+        return tuple((label, (None if v is None else float(v))) for label, v in split)
 
     def _process_scan(self, now: float) -> None:
         if now - self._last_process_scan < 5:
@@ -1108,6 +1143,7 @@ class SystemMonitor:
             tools_scan_status=self._tools_scan_status,
             tools_scan_seq=self._tools_scan_seq,
             youtube_visible=self._youtube_visible,
+            gpu_split=self._gpu_split(adv, bool(adv_fresh and adv.gpu_valid), now),
         )
         self.latest_snapshot = result
         self._record_snapshot(result)

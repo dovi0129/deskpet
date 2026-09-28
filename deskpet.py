@@ -280,7 +280,7 @@ class DeskPet:
         self._sleep_text = ""
         self._rows: tuple = ()
         self._summary: tuple = ()
-        self._npu_row_visible = False
+        self._extra_rows = 0  # NPU row + one more GPU row per extra GPU
         self._pointer_trail: deque = deque(maxlen=12)
         self.affection = Affection(data_root() / "affection.json")
         self.daily = DailyLog(data_root() / "daily")
@@ -460,7 +460,8 @@ class DeskPet:
         self.root.geometry(f"+{x}+{y}")
 
     # ---------- UI ----------
-    ROWS_BASE = 7  # CPU RAM GPU 온도 밥 기분 작업 (+ NPU when the device exists)
+    ROWS_BASE = 7  # CPU RAM GPU 온도 밥 기분 작업 (+ NPU when the device exists, + a row per extra GPU)
+    GPU_ROW_WARN = 75.0  # with GPU_BUSY, only the GPU rows at or above this turn amber
     # Class-level defaults: some tests build a partial DeskPet without __init__.
     _notice = ""
     _notice_until = 0.0
@@ -710,7 +711,7 @@ class DeskPet:
         self._apply_cat_size("small" if self.config.get("cat_size") == "large" else "large")
 
     def _detail_height(self) -> int:
-        return self.card.layout_height(True, self.ROWS_BASE + (1 if self._npu_row_visible else 0))
+        return self.card.layout_height(True, self.ROWS_BASE + self._extra_rows)
 
     def _build_menu(self) -> None:
         self.menu = Menu(self.root, tearoff=0)
@@ -982,11 +983,11 @@ class DeskPet:
     def _current_detail_height(self) -> int:
         return self._detail_height()
 
-    def _sync_npu_row_layout(self, visible: bool) -> None:
-        visible = bool(visible)
-        if visible == self._npu_row_visible:
+    def _sync_row_layout(self, extra: int) -> None:
+        extra = max(0, int(extra))
+        if extra == self._extra_rows:
             return
-        self._npu_row_visible = visible
+        self._extra_rows = extra
         if self.details_visible:
             x, y = self.root.winfo_x(), self.root.winfo_y()
             self.root.geometry(f"{self.DETAIL_WIDTH}x{self._detail_height()}+{x}+{y}")
@@ -1366,12 +1367,21 @@ class DeskPet:
             self._render_card()
             return
         lv = self._levels()
-        self._sync_npu_row_layout(s.npu_present)
+        split = tuple(getattr(s, "gpu_split", ()) or ())
+        if len(split) < 2:
+            split = ()
+        self._sync_row_layout((1 if s.npu_present else 0) + max(0, len(split) - 1))
         rows = [
             self._percent_row("CPU", s.cpu, s.cpu_valid, lv["cpu"]),
             self._percent_row("RAM", s.ram, s.ram_valid, lv["ram"]),
-            self._percent_row("GPU", s.gpu, s.gpu_valid, lv["gpu"]),
         ]
+        if split:
+            # Two or more GPUs (e.g. iGPU + dGPU): one row each, like the server cats.
+            for label, value in split:
+                level = lv["gpu"] if value is not None and value >= self.GPU_ROW_WARN else "normal"
+                rows.append(self._percent_row(label, value, bool(s.gpu_valid) and value is not None, level))
+        else:
+            rows.append(self._percent_row("GPU", s.gpu, s.gpu_valid, lv["gpu"]))
         if s.npu_present:
             rows.append(self._percent_row("NPU", s.npu, bool(s.npu_valid), "normal"))
 

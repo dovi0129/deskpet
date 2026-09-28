@@ -104,6 +104,20 @@ try:
         app.root.update_idletasks()
         assert 'NPU' not in [r.label for r in app._rows]
         assert app.root.winfo_height()==app._detail_height()
+        # Two GPUs (iGPU + dGPU): one row each, the card grows by one row and still fits.
+        one_gpu_height=app._detail_height()
+        s.gpu_split=(('iGPU',3.0),('dGPU',None));s.npu_present=True
+        app._update_details();app.root.update_idletasks()
+        labels=[r.label for r in app._rows]
+        assert labels[:5]==['CPU','RAM','iGPU','dGPU','NPU'] and 'GPU' not in labels, labels
+        assert [r for r in app._rows if r.label=='iGPU'][0].segments[0][0]=='3%'
+        assert [r for r in app._rows if r.label=='dGPU'][0].segments[0][0]=='--', 'unread GPU must not read as 0%'
+        assert app.root.winfo_height()==app._detail_height()==app.card.height>one_gpu_height, (factor,'two-GPU height')
+        rb=c.bbox('row')
+        assert rb and rb[3]<=app.card.card_bbox[3]+1 and rb[2]<=app.card.card_bbox[2], (factor,rb,'two-GPU rows clipped')
+        s.gpu_split=();s.npu_present=False
+        app._update_details();app.root.update_idletasks()
+        assert 'GPU' in [r.label for r in app._rows] and app.root.winfo_height()==one_gpu_height
         app.toggle_details()
         app.root.update_idletasks()
         assert app.root.winfo_height()==app.PET_HEIGHT==app.card.height
@@ -152,7 +166,7 @@ try:
         assert rb and rb[3]<=app.card.card_bbox[3]+1 and rb[2]<=W, (factor,'large rows clipped')
         app.toggle_details();app._apply_cat_size('small');app.root.update_idletasks()
         assert app.root.winfo_width()==app.PET_WIDTH and app.root.winfo_height()==app.PET_HEIGHT
-        print(f'{int(factor*100)}% Tk font/geometry simulation: card/bubble/cat bounds, buttons, NPU unknown/zero/absent, fixed cat center, large cat OK')
+        print(f'{int(factor*100)}% Tk font/geometry simulation: card/bubble/cat bounds, buttons, NPU unknown/zero/absent, iGPU+dGPU rows, fixed cat center, large cat OK')
         app.close()
 finally:
     if ORIGINAL_CONFIG is None:
