@@ -24,7 +24,7 @@ NOT_SHIPPED = {"gui_smoke.py", "self_test.py"}
 DATA_FILES = ("voice_catalog.json", "deskpet_probe.ps1")
 IPV4 = re.compile(r"\b\d{1,3}(?:\.\d{1,3}){3}\b")
 
-README = """DeskPet Classic 2.4.0-rc9-classic3 (Windows, Python 설치 필요 없음)
+README = """DeskPet Classic 2.4.0-rc9-classic3 (Windows)
 
 실행
 - 압축을 푼 뒤 DeskPet 폴더 안의 DeskPet.exe를 더블클릭합니다.

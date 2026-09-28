@@ -9,7 +9,7 @@ Windows 바탕화면에 사는 작은 아스키 고양이입니다. 노트북 �
    > ^ <
 ```
 
-## 받기 (Python 필요 없음)
+## 받기
 
 1. [Releases](https://github.com/dovi0129/deskpet/releases/latest)에서 `DeskPet_classic3_windows.zip`을 받습니다.
 2. 압축을 풀고 `DeskPet` 폴더 안의 `DeskPet.exe`를 실행합니다.
